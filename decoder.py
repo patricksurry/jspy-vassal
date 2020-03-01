@@ -5,12 +5,13 @@ import re
 
 MAGIC_HEADER = '!VCSK'
 UNUSED_SIGIL = '\x01'
+# ./launch/BasicModule.java:  private static char COMMAND_SEPARATOR = (char) KeyEvent.VK_ESCAPE;
 COMMAND_SEPARATOR = '\x1b'
 
 
 def deobfuscate(s):
     """
-    Deobufuscate an input stream, to get an almost equally obfuscated sequence encoding :-)
+    Deobufuscate an input stream, to get an almost equally incomprehsible serialized encoding :-)
 
     tools/io/ObfuscatingOutputStream.java
     tools/io/DeobfuscatingInputStream.java
@@ -29,7 +30,12 @@ def dequote(s):
 
 
 def disconcat(s, delim, maxsplit=-1):
-    """parse output of tools.SequenceEncoder, which concats a sequence of strings using a delimiter"""
+    """
+    parse output of tools.SequenceEncoder, which concats a sequence of strings using a delimiter
+
+    The encoding is done by concat'ing items with a delimiter, first escaping existing delimiters
+    within the items, and quoting any single-quoted strings 'a' or strings ending with delimiter
+    """
     if s is None:  # as opposed to '' => ['']
         return []
 
@@ -74,7 +80,6 @@ def seqdict(proto, vs, use_defaults=True, ignore_excess=True):
         vs = vs[:nk-1] + [vs[nk-1:]]
     vs = [f(v) for (f, v) in zip(fs, vs)]
     return dict(zip(ks, vs))
-
 
 
 # compound type constructors that wrap other constructors

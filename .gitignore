@@ -1,1 +1,4 @@
 __pycache__/
+vassalengine-svn/
+test/*.raw
+test/*.json

@@ -1,0 +1,8 @@
+name: jspy-vassal
+channels:
+- defaults
+dependencies:
+- python=3.6.1
+- pip
+- pip:
+  - xmljson

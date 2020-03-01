@@ -149,6 +149,19 @@ _pieceDecoders = dict(
     # counters.FreeRotator
     # "type": "rotate;6;93,130;91,130;Rotate CW;Rotate CCW;;;",
     # "state": "0"
+    rotate=_protoDecoder(
+        dict(
+            validAngles=int,
+            #TODO - next items areconditional on validAngles==1
+            # in that case we want:
+            #   setAngleKey=keyStroke, setAngleText=str,
+            # but assume always != 1 case for now
+            rotateCWKey=keyStroke, rotateCCWKey=keyStroke,
+            rotateCWText=str, rotateCCWText=str,
+            rotateRNDKey=keyStroke, rotateRNDText=str, name=str
+        ),
+        dict(angleIndex=int)
+    )
 )
 
 _missingPieceDecoders = {}

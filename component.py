@@ -1,16 +1,24 @@
 # Decode game components listed in save file, which implement module/GameComponent.java
+# many of these are module-specific plugins which we probably can't do much with
+
 
 from decoder import varargs, disdict, disconcat, seqdict, formatted, boolish, COMMAND_SEPARATOR
+
 
 def _tabProto(**kwargs):
     return disdict(kwargs, '\t')
 
+
 _noteTypes=dict(
+    # module/NotesWindow.java  - NOTE / PNOTE
+    # "NOTES\t\u001bPNOTES\t\u001bPNOTE\trommel8\tGermsn-Bill Thomson|Russian-Peter Stein|Bid 24 RP; 1 extra a turn"
+    # "PNOTE\trommel8\tGermsn-Bill Thomson|Russian-Peter Stein|Bid 24 RP; 1 extra a turn"
     NOTES=dict(type='scenario', proto=dict(text=formatted)),
     PNOTES=dict(type='public', proto=dict(text=formatted)),
     PNOTE=dict(type='private', proto=dict(owner=str, text=formatted)),
     SNOTE=dict(type='secret', proto=dict(name=str, owner=str, hidden=boolish, text=formatted)),
 )
+
 
 def noteDecoder(s):
     notes = {}
@@ -25,6 +33,7 @@ def noteDecoder(s):
         notes[typ] = note
     return notes
 
+
 _componentDecoders = dict(
     # module/map/BoardPicker
     BoardPicker=_tabProto(id=str, name=str, x=int, y=int), #TODO name can be optional name/rev
@@ -34,10 +43,6 @@ _componentDecoders = dict(
     NOTE=noteDecoder
 )
 
-"""
-"NOTES\t\u001bPNOTES\t\u001bPNOTE\trommel8\tGermsn-Bill Thomson|Russian-Peter Stein|Bid 24 RP; 1 extra a turn"
-"PNOTE\trommel8\tGermsn-Bill Thomson|Russian-Peter Stein|Bid 24 RP; 1 extra a turn"
-"""
 
 def decodeComponent(state):
     cmd = disconcat(state, COMMAND_SEPARATOR)[0]
@@ -55,14 +60,10 @@ def decodeComponent(state):
     return result
 
 
-#module/NotesWindow.java  - NOTE / PNOTE
-
-
 """
-"FlugplatzBoardPicker\tFlugplatz\t0\t0"
+TODO - TurnTracker is a built-in thing we could decode
 
-
-        "TURNTurnTracker0\t0|1941;0;false;-1;1\\;0\\;0\\;true,true,true,true,true,true\\;0\\\\;0\\\\;0\\\\;true,true,true,true\\\\;0\\\\\\;0\\\\\\;0\\\\\\;true"
+"TURNTurnTracker0\t0|1941;0;false;-1;1\\;0\\;0\\;true,true,true,true,true,true\\;0\\\\;0\\\\;0\\\\;true,true,true,true\\\\;0\\\\\\;0\\\\\\;0\\\\\\;true"
 
 TURN
 
@@ -82,8 +83,11 @@ TURN
       se.append(COMMAND_PREFIX + com.getTurn().getId());
       se.append(com.newState);
 
-
 currentLevel(int)|turnlevel
+
+BoardPicker should look like this:
+
+"FlugplatzBoardPicker\tFlugplatz\t0\t0"
 
 """
 

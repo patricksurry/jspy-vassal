@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VASSAL.launch.BasicModule VassalVersion="3.0.5" name="A3R with AWAW Map" version="1.7.0.2_AWAW">
+<VASSAL.build.module.BasicCommandEncoder/>
+<VASSAL.build.module.Documentation>
+<VASSAL.build.module.documentation.AboutScreen fileName="/images/Splash.gif" title="About VASSAL"/>
+<VASSAL.build.module.documentation.HelpFile fileName="3R4 &amp; A3R  Game Credits.txt" fileType="archive" title="Board Game Credits"/>
+<VASSAL.build.module.documentation.HelpFile fileName="A3R-VersionHistory.txt" fileType="archive" title="Module Revision History"/>
+<VASSAL.build.module.documentation.HelpFile fileName="3R4 &amp; A3R AREA Player Rating .txt" fileType="archive" title="3R4 &amp; A3R Area Player Ratings"/>
+<VASSAL.build.module.documentation.HelpFile fileName="/help/Intro.html" fileType="resource" title="Quick Start"/>
+<VASSAL.build.module.documentation.HelpFile fileName="docs/UsersGuide/index.htm" fileType="file" title="User's Guide"/>
+</VASSAL.build.module.Documentation>
+<VASSAL.build.module.PlayerRoster buttonIcon="Retire" buttonText="Retire" buttonToolTip="Allow another player to take your side in this game"/>
+<VASSAL.build.module.GlobalOptions autoReport="Never" centerOnMove="Always" nonOwnerUnmaskable="Never" playerIdFormat="$playerName$" promptString="Opponents can unmask my pieces">
+<option name="stepIcon">/images/StepForward16.gif</option>
+<option name="undoIcon">/images/Undo16.gif</option>
+<option name="stepHotKey">34,0</option>
+<option name="serverControlsIcon">/images/connect.gif</option>
+<option name="serverControlsHotKey">83,520</option>
+</VASSAL.build.module.GlobalOptions>
+<VASSAL.build.module.Map allowMultiple="true" buttonName="Map" changeFormat="$message$" color="255,0,0" createFormat="" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="false" mapName="Map Window" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="" moveWithinFormat="" thickness="3">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select map" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Map">
+<setup>Map WindowBoardPicker	A3R European Front	0	0</setup>
+<VASSAL.build.module.map.boardPicker.Board image="a3r-eto-map_awaw_changes.gif" name="A3R European Front" reversible="false">
+<VASSAL.build.module.map.boardPicker.board.ZonedGrid>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="US Box" path="6,18;203,18;203,200;6,200" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="Murbansk Box" path="206,19;433,19;433,200;206,200" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="SW Box" path="7,206;324,206;324,368;7,368" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="Variants" path="28,381;297,381;297,769;28,769" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="Turn Tracker" path="76,2114;797,2114;797,2362;76,2362" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="Lend Lease Box" path="476,2369;796,2369;796,2575;476,2575" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="South Africa Box" path="3539,2461;3733,2461;3733,2611;3539,2611" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="India Box" path="3540,2309;3731,2309;3731,2457;3540,2457" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.Zone highlightProperty="" locationFormat="$name$" name="Siberia Box" path="3419,23;3686,23;3686,205;3419,205" useHighlight="false" useParentGrid="false"/>
+<VASSAL.build.module.map.boardPicker.board.HexGrid cornersLegal="false" dotsVisible="false" dx="62.35382907247958" dy="72.0" edgesLegal="false" sideways="true" visible="false" x0="35" y0="23">
+<ThirdReich.ObliqueHexGridNumbering color="0,0,0" first="H" fontSize="9" hDescend="false" hDrawOff="0" hLeading="1" hOff="-1" hType="A" locationFormat="$gridLocation$" rotateText="0" sep="" stagger="true" vDescend="false" vDrawOff="0" vLeading="1" vOff="15" vType="N" visible="false"/>
+</VASSAL.build.module.map.boardPicker.board.HexGrid>
+<VASSAL.build.module.map.boardPicker.board.mapgrid.ZonedGridHighlighter/>
+</VASSAL.build.module.map.boardPicker.board.ZonedGrid>
+</VASSAL.build.module.map.boardPicker.Board>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="2"/>
+<VASSAL.build.module.map.GlobalMap buttonText="" color="0,0,0" hotkey="79,195" icon="/images/overview.gif" scale="0.19444444" tooltip="Show/Hide overview window"/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="0,255,255" borderWidth="0" counterReportFormat="" delay="1200" display="from all layers" emptyHexReportForma="$LocationName$" fgColor="255,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="true" showNoStack="true" showNonMovable="true" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="true" version="2" zoomlevel="0.5"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+<VASSAL.build.module.map.SelectionHighlighters/>
+<VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+<VASSAL.build.module.map.HidePiecesButton buttonText="Hide Units" hiddenIcon="/images/globe_selected.gif" hotkey="72,520" showingIcon="/images/globe_unselected.gif" tooltip="Hide all pieces on this map"/>
+</VASSAL.build.module.Map>
+<VASSAL.build.module.Chatter/>
+<VASSAL.build.module.Map allowMultiple="true" buttonName="Show/Hide Scenarios" changeFormat="$message$" color="255,0,0" createFormat="" edgeHeight="0" edgeWidth="0" hotkey="" icon="/images/map.gif" launch="true" mapName="Scenario Card" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="" moveWithinFormat="" thickness="3">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select scenario card" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Scenario Cards">
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-ge.gif" name="A3R Germany Campaign" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-it.gif" name="A3R Italy Campaign" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-br.gif" name="A3R Britain Campaign" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-fr.gif" name="A3R France Campaign" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-us.gif" name="A3R United States Campaign" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-ru.gif" name="A3R Russia Campaign" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-ge-barb.gif" name="A3R Germany Barbarossa" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="info-sc-ru-barb.gif" name="A3R Russia Barbarossa" reversible="false"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="1200" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="0.5"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+<VASSAL.build.module.map.SelectionHighlighters/>
+<VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+</VASSAL.build.module.Map>
+<VASSAL.build.module.DiceButton hotkey="" icon="/images/die.gif" nDice="2" nSides="6" name="DR" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="false" text="DR" tooltip="DR"/>
+<VASSAL.build.module.DiceButton hotkey="" icon="/images/die.gif" nDice="1" nSides="6" name="dr" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="false" text="dr" tooltip="dr"/>
+<VASSAL.build.module.InternetDiceButton hotkey="" icon="/images/die.gif" nDice="2" nSides="6" name="Internet DR" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="false" text="Internet DR" tooltip="Internet DR"/>
+<VASSAL.build.module.InternetDiceButton hotkey="" icon="" nDice="1" nSides="6" name="Internet dr" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="false" text="Internet dr" tooltip="Internet dr"/>
+<VASSAL.build.module.PieceWindow hidden="false" hotkey="" icon="" name="Counters" text="Counters" tooltip="Show/Hide the Counters window">
+<VASSAL.build.widget.TabWidget>
+<VASSAL.build.widget.PanelWidget entryName="Info" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="British Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;britain-sm.gif;British Control/	null;28;24</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="French Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;france-sm;French Control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Italian Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;italy-sm;Italian Control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="German Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;germany-sm;German Control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;usa-sm;US Control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Russian Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;russia-sm;Russian Control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Japanese Control" height="43" width="43">+/null/prototype;Does Not Stack	piece;C;D;japan-sm;Japanese Control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Fort Moscow" height="48" width="48">+/null/piece;C;D;info-ft-moscow;Fort Moscow/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Fort Sedan" height="48" width="48">+/null/piece;C;D;info-ft-sedan;Fort Sedan/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Isolated" height="48" width="48">+/null/piece;C;D;info-isol;Isolated/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Break Through" height="48" width="48">+/null/piece;C;D;info-bt;Break Through/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Exploit" height="48" width="48">+/null/piece;C;D;info-exp;Exploit/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Season" height="48" width="48">+/null/piece;C;D;info-season;Season/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Year" height="48" width="48">+/null/piece;C;D;info-year;Year/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Tension" height="48" width="48">+/null/piece;C;D;info-tension;Tension/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Factory" height="48" width="48">+/null/piece;C;D;info-factory;Factory/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Oil Rig" height="48" width="48">+/null/piece;C;D;info-oil-rig;Oil Rig/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Sea Supply" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;255,51,255;255,51,255;100;50;20;30;4.0\\	clone;Clone;67,130\\\	delete;Delete;68,130\\\\	piece;;;info-sea-supply.gif;Sea Supply/	\	true;;0\\	\\\	\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Railhead" height="48" width="57">+/null/markmoved;moved;24;-24;Mark Moved;77,130	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;info-railhead.gif;Railhead/false	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.BoxWidget entryName="Units" height="288" width="171">
+<VASSAL.build.widget.PanelWidget entryName="Britain" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="UK Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-inf-13;UK Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Inf 1-3c" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-inf-13c;UK Inf 1-3c/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Inf 3-3ab" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	emb2;;2;;Increase;2;X;Decrease;2;Z;Reset;;1;false;0;0; ,br-inf-13ab.gif;br-AB-3m3,;true;br-AB;;;false;;0\\\	piece;C;D;br-inf-33ab;UK Inf 3-3ab/	\	\\	1;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Inf 3-4" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-inf-34;UK Inf 3-4/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Part 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-part;UK Part 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Rep" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-rep;UK Rep/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Arm 2-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-arm-25;UK Arm 2-5/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Arm 4-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;br-arm-45;UK Arm 4-5/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,204,0;255,204,0;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;br-air-14,br-air-24,br-air-34,br-air-44,br-air-54;,,,,;true;;;;false;;1\\\\	piece;C;D;;UK Air/	\	\\	false;;0\\\	5;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;255,204,51;255,204,51;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;br-sea-1,br-sea-2,br-sea-3,br-sea-4,br-sea-5,br-sea-6,br-sea-7,br-sea-8,br-sea-9;,,,,,,,,;true;;;;false;;1\\\	piece;C;D;;UK Naval/	\	false;;0\\	9;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Bridgehead" height="48" width="48">+/null/prototype;Basic	piece;C;D;br-bh;UK Bridgehead/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Airbase" height="48" width="48">+/null/prototype;Basic	piece;C;D;br-airbase;UK Airbase/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK BRP" height="41" width="42">+/null/prototype;Basic	piece;C;D;br-brp;UK BRP/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK ASW" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;br-destroyer-1,br-destroyer-2,br-destroyer-3,br-destroyer-4,br-destroyer-5,br-destroyer-6,br-destroyer-7,br-destroyer-8,br-destroyer-9,br-destroyer-10;,,,,,,,,,;true;;;;false;;1\\	piece;C;D;;UK ASW/	null\	10;\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Submarine" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;255,204,51;255,204,51;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;br-sub-1,br-sub-2,br-sub-3,br-sub-4,br-sub-5;,,,,;true;;;;false;;1\\\	piece;C;D;;UK Submarine/	\	false;;0\\	1;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Interceptor" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;br-int-1.gif,br-int-2.gif,br-int-3.gif,br-int-4.gif,br-int-5.gif,br-int-6.gif,br-int-7.gif,br-int-8.gif,br-int-9.gif,br-int-10.gif;,,,,,,,,,;true;;;;false;;1\\	piece;C;D;;UK Interceptor/	null\	1;\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK SAC" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;br-bomber-1,br-bomber-2,br-bomber-3,br-bomber-4,br-bomber-5,br-bomber-6,br-bomber-7,br-bomber-8,br-bomber-9,br-bomber-10;,,,,,,,,,;true;;;;false;;1\\	piece;C;D;;UK SAC/	null\	10;\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Jet" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,204,0;255,204,0;100;50;20;30;4.0\\\	clone;Clone;67,130\\\\	delete;Delete;68,130\\\\\	piece;;;br-jet.gif;UK Jet/	\	\\	true;;0\\\	\\\\	\\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="UK Rocket" height="48" width="48">+/null/prototype;Basic	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;br-rocket.gif;UK Rocket/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="France" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="FR Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;fr-inf-13;FR Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;fr-inf-23;FR Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Rep" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;fr-rep;FR Rep/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Arm 3-6" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;fr-arm-35;FR Arm 3-6/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;51,51,255;51,51,255;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;fr-air-14,fr-air-24,fr-air-34,fr-air-44,fr-air-54;,,,,;true;;;;false;;1\\\\	piece;C;D;;FR Air/	\	\\	false;;0\\\	5;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;51,51,255;51,51,255;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;fr-sea-1,fr-sea-2,fr-sea-3,fr-sea-4,fr-sea-5,fr-sea-6,fr-sea-7,fr-sea-8,fr-sea-9;,,,,,,,,;true;;;;false;;1\\\	piece;C;D;;FR Naval/	\	false;;0\\	9;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Bridgehead" height="48" width="48">+/null/prototype;Basic	piece;C;D;fr-bh;FR Bridgehead/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR Airbase" height="48" width="48">+/null/prototype;Basic	piece;C;D;fr-airbase;FR Airbase/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="FR BRP" height="41" width="42">+/null/prototype;Basic	piece;C;D;fr-brp;FR BRP/	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="Germany" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="GE Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-inf-13;GE Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Inf 3-3ab" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	emb2;;2;;Increase;2;X;Decrease;2;Z;Reset;;1;false;0;0; ,ge-inf-13ab.gif;,;true;ge-AB;;;false;;0\\\	piece;C;D;ge-inf-33ab;GE Inf 3-3ab/	\	\\	1;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Inf 3-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-inf-33;GE Inf 3-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Rep" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-rep;GE Rep/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Arm 2-6" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-arm-26;GE Arm 2-6/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Arm 4-6" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-arm-46;GE Arm 4-6/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Arm 5-6" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-arm-56;GE Arm 5-6/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;0,0,0;0,0,0;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ge-air-14,ge-air-24,ge-air-34,ge-air-44,ge-air-54;,,,,;true;;;;false;;1\\\\	piece;C;D;;GE Air/	\	\\	false;;0\\\	5;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;0,0,0;0,0,0;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ge-sea-1,ge-sea-2,ge-sea-3,ge-sea-4,ge-sea-5,ge-sea-6,ge-sea-7,ge-sea-8,ge-sea-9;,,,,,,,,;true;;;;false;;1\\\	piece;C;D;;GE Naval/	\	false;;0\\	9;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Bridgehead" height="48" width="48">+/null/prototype;Basic	piece;C;D;ge-bh;GE Bridgehead/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Airbase" height="48" width="48">+/null/prototype;Basic	piece;C;D;ge-airbase;GE Airbase/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE BRP" height="41" width="42">+/null/prototype;Basic	piece;C;D;ge-BRP;GE BRP/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE U-Boat" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ge-uboat-1,ge-uboat-2,ge-uboat-3,ge-uboat-4,ge-uboat-5,ge-uboat-6,ge-uboat-7,ge-uboat-8,ge-uboat-9,ge-uboat-10;,,,,,,,,,;true;;;;false;;1\\	piece;C;D;;GE U-Boat/	null\	10;\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Interceptor" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ge-int-1,ge-int-2,ge-int-3,ge-int-4,ge-int-5,ge-int-6,ge-int-7,ge-int-8,ge-int-9,ge-int-10;,,,,,,,,,;true;;;;false;;1\\	piece;C;D;;GE Interceptor/	null\	10;\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Rocket" height="48" width="48">+/null/prototype;Basic	piece;C;D;ge-rocket.gif;GE Rocket/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Jet" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;4;0,0,0;0,0,0;100;50;20;30;4.0\\\	clone;Clone;67,130\\\\	delete;Delete;68,130\\\\\	piece;;;ge-jet.gif;GE Jet/	\	\\	true;;0\\\	\\\\	\\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE SAC" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ge-bomber-1.gif,ge-bomber-2.gif,ge-bomber-3.gif,ge-bomber-4.gif,ge-bomber-5.gif,ge-bomber-6.gif,ge-bomber-7.gif,ge-bomber-8.gif,ge-bomber-9.gif,ge-bomber-10.gif;,,,,,,,,,;true;;;;false;;1\\	clone;Clone;67,130\\\	delete;Delete;68,130\\\\	piece;C;D;;GE SAC/	null\	10;\\	\\\	\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GE Nuke" height="48" width="48">+/null/clone;Clone;67,130	delete;Delete;68,130\	prototype;Basic\\	piece;;;ge-nuke.gif;GE Nuke/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="Italy" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="IT Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	piece;C;D;it-inf-13;IT Inf 1-3/	\	\\	\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	piece;C;D;it-inf-23;IT Inf 2-3/	\	\\	\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Inf 2-3ab" height="48" width="57">+/null/prototype;Ground	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;Reset;;1;false;0;0; ,it-inf-13ab.gif;,;true;it-AB;;;false;;0\\\\	piece;C;D;it-inf-23ab;IT Inf 2-3ab/	\	\\	\\\	1;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Inf 3-3" height="48" width="57">+/null/prototype;Ground	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	piece;C;D;it-inf-33;IT Inf 3-3/	\	\\	\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Rep" height="48" width="57">+/null/prototype;Ground	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	piece;C;D;it-rep;IT Rep/	\	\\	\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Arm 2-5" height="48" width="57">+/null/prototype;Ground	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	piece;C;D;it-arm-25;IT Arm 2-5/	\	\\	\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Air" height="48" width="57">+/null/prototype;Air	prototype;Lent\	prototype;KIA\\	prototype;Basic\\\	footprint;84,130;Movement Trail;false;true;6;153,255,153;153,255,153;100;50;20;30;4.0\\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;it-air-14,it-air-24,it-air-34,it-air-44,it-air-54;,,,,;true;;;;false;;1\\\\\	piece;C;D;;IT Air/	\	\\	\\\	false;;0\\\\	5;\\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;153,255,153;153,255,153;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;it-sea-1,it-sea-2,it-sea-3,it-sea-4,it-sea-5,it-sea-6,it-sea-7,it-sea-8,it-sea-9;,,,,,,,,;true;;;;false;;1\\\	piece;C;D;;IT Naval/	\	false;;0\\	9;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Airbase" height="48" width="48">+/null/prototype;Basic	piece;C;D;it-airbase;IT Airbase/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT Bridgehead" height="48" width="48">+/null/prototype;Basic	piece;C;D;it-bh;IT Bridgehead/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="IT BRP" height="41" width="42">+/null/prototype;Basic	piece;C;D;it-BRP;IT BRP/	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="Russia" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="RUS Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ru-inf-13;RUS Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ru-inf-23;RUS Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Inf 2-3ab" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	emb2;;2;;Increase;2;X;Decrease;2;Z;Reset;;1;false;0;0; ,ru-inf-13ab.gif;,;true;ru-AB;;;false;;0\\\	piece;C;D;ru-inf-23ab;RUS Inf 2-3ab/	\	\\	1;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Inf 3-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ru-inf-33;RUS Inf 3-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Part 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ru-part-13;RUS Part 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Arm 3-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ru-arm-35;RUS Arm 3-5/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Arm 4-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ru-arm-45;RUS Arm 4-5/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Arm 5-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	clone;Clone;67,130\\\	delete;Delete;68,130\\\\	piece;;;ru-arm-55;RUS Arm 5-5/	\	\\	\\\	\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,0,0;255,0,0;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ru-air-14,ru-air-24,ru-air-34,ru-air-44,ru-air-54;,,,,;true;;;;false;;1\\\\	piece;C;D;;RUS Air/	\	\\	false;;0\\\	5;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;255,0,0;255,0,0;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ru-sea-1,ru-sea-2,ru-sea-3,ru-sea-4,ru-sea-5,ru-sea-6,ru-sea-7,ru-sea-8,ru-sea-9;,,,,,,,,;true;;;;false;;1\\\	piece;C;D;;RUS Naval/	\	false;;0\\	9;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Bridgehead" height="48" width="48">+/null/prototype;Basic	piece;C;D;ru-bh;RUS Bridgehead/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Airbase" height="48" width="48">+/null/prototype;Basic	piece;C;D;ru-airbase;RUS Airbase/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS BRP" height="41" width="42">+/null/prototype;Basic	piece;C;D;ru-brp;RUS BRP/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Industrial Center" height="48" width="48">+/null/prototype;Basic	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ru-factory-1,ru-factory-2,ru-factory-3,ru-factory-4,ru-factory-5,ru-factory-6,ru-factory-7,ru-factory-8,ru-factory-9,ru-factory-10,ru-factory-15.gif,ru-factory-20.gif,ge-factory-5.gif,ge-factory-7.gif,ge-factory-10.gif;,,,,,,,,,,,,German 5,German 7,German 10;true;;;;false;;1\	piece;C;D; ;RUS Industrial Center/	1;\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RU Interceptor" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ru-int-1.gif,ru-int-2.gif,ru-int-3.gif,ru-int-4.gif,ru-int-5.gif,ru-int-6.gif,ru-int-7.gif,ru-int-8.gif,ru-int-9.gif,ru-int-10.gif;,,,,,,,,,;true;;;;false;;1\\	piece;C;D;;RU Interceptor/	null\	10;\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS SAC" height="48" width="48">+/null/prototype;Basic	hide;73,130;Invisible;;player:\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;ru-bomber-1.gif,ru-bomber-2.gif,ru-bomber-3.gif,ru-bomber-4.gif,ru-bomber-5.gif,ru-bomber-6.gif,ru-bomber-7.gif,ru-bomber-8.gif,ru-bomber-9.gif,ru-bomber-10.gif;,,,,,,,,,;true;;;;false;;1\\	clone;Clone;67,130\\\	delete;Delete;68,130\\\\	piece;C;D;;RUS SAC/	null\	10;\\	\\\	\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Jet" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,0,0;255,0,0;100;50;20;30;4.0\\\	clone;Clone;67,130\\\\	delete;Delete;68,130\\\\\	piece;;;ru-jet.gif;RUS Jet/	\	\\	true;;0\\\	\\\\	\\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Rocket" height="48" width="48">+/null/prototype;Basic	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;ru-rocket.gif;RUS Rocket/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RUS Nuke" height="48" width="48">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;ru-nuke.gif;RUS Nuke/	\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="US" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="US Inf 3-4" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;am-inf-34;US Inf 3-4/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Inf 3-3ab" height="48" width="57">+/null/emb2;;2;;Increase;2;X;Decrease;2;Z;Reset;;1;false;0;0; ,am-inf-13ab.gif;,;true;am-AB;;;false;;0	prototype;Ground\	prototype;KIA\\	prototype;Basic\\\	piece;C;D;am-inf-33ab;US Inf 3-3ab/1;	\	\\	\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Rep" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;am-rep;US Rep/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Arm 5-6" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;am-arm-56;US Arm 5-6/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;102,153,0;102,153,0;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;am-air-14,am-air-24,am-air-34,am-air-44,am-air-54;,,,,;true;;;;false;;1\\\\	piece;C;D;;US Air/	\	\\	false;;0\\\	5;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;102,153,0;102,153,0;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;am-sea-1,am-sea-2,am-sea-3,am-sea-4,am-sea-5,am-sea-6,am-sea-7,am-sea-8,am-sea-9;,,,,,,,,;true;;;;false;;1\\\	piece;C;D;;US Naval/	\	true;;0\\	9;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Bridgehead" height="48" width="48">+/null/prototype;Basic	piece;C;D;am-bh;US Bridgehead/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Airbase" height="48" width="48">+/null/prototype;Basic	piece;C;D;am-airbase;US Airbase/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US BRP" height="41" width="42">+/null/prototype;Basic	piece;C;D;us-BRP;US BRP/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Nuke" height="48" width="48">+/null/prototype;Basic	piece;C;D;am-nuke;US Nuke/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Jet" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;102,153,0;102,153,0;100;50;20;30;4.0\\\	clone;Clone;67,130\\\\	delete;Delete;68,130\\\\\	piece;;;am-jet.gif;US Jet/	\	\\	true;;0\\\	\\\\	\\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="US Rocket" height="48" width="48">+/null/prototype;Basic	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;am-rocket.gif;US Rocket/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+</VASSAL.build.widget.BoxWidget>
+<VASSAL.build.widget.BoxWidget entryName="Neutrals" height="288" width="171">
+<VASSAL.build.widget.PanelWidget entryName="Major Neutrals" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="Sp Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;sp-inf-23;Sp Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Sp Arm 2-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;sp-arm-25;Sp Arm 2-5/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Sp Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,204,51;255,204,51;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;sp-air-14,sp-air-24;,;true;;;;false;;1\\\\	piece;C;D;sp-air-24;Sp Air/	\	\\	false;;0\\\	2;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Sp Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;255,204,51;255,204,51;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;sp-sea-1,sp-sea-2;,;true;;;;false;;1\\\	piece;C;D;sp-sea-2;Sp Naval/	\	false;;0\\	2;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Turk Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;turk-inf-23;Turk Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Turk Arm 2-5" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;turk-arm-25;Turk Arm 2-5/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Turk Air" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,204,0;255,204,0;100;50;20;30;4.0\\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;turk-air-14,turk-air-24;,;true;;;;false;;1\\\\	piece;C;D; ;Turk Air/	\	\\	false;;0\\\	2;\\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Turk Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;true;6;255,204,0;255,204,0;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;turk-sea-1,turk-sea-2;,;true;;;;false;;1\\\	piece;C;D; ;Turk Naval/	\	false;;0\\	2;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Iraq Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;iraq-inf-13;Iraq Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Iraq Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,204,0;255,204,0;100;50;20;30;4.0\\\	piece;C;D;iraq-air-14;Iraq Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Pers Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;pers-inf-13;Pers Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Pers Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,204,0;255,204,0;100;50;20;30;4.0\\\	piece;C;D;pers-air-14;Pers Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Finn Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;finn-inf-23;Finn Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Finn Air 14" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;102,153,255;102,153,255;100;50;20;30;4.0\\\	piece;C;D;finn-air-14;Finn Air 14/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Part" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;neu-part;Part/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="Axis Minor Neutrals" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="Generic Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-inf-13r;Generic Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Generic Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ge-inf-23r;Generic Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Ukr Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ukr_inf-13;Ukr Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Ukr Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;ukr-inf-23;Ukr Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Bulg Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;bulg-inf-13;Bulg Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Bulg Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;204,204,204;204,204,204;100;50;20;30;4.0\\\	piece;C;D;bulg-air-14;Bulg Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Hun Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;hun-inf-13;Hun Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Hun Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;hun-inf-23;Hun Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Hun Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;0,153,102;0,153,102;100;50;20;30;4.0\\\	piece;C;D;hun-air-14;Hun Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Yug Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;yug-inf-13;Yug Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Yug Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;yug-inf-23;Yug Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Yug Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;204,204,204;204,204,204;100;50;20;30;4.0\\\	piece;C;D;yug-air-14;Yug Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Rum Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;rum-inf-13;Rum Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Run Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;rum-inf-23;Run Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Rum Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;51,102,255;51,102,255;100;50;20;30;4.0\\\	piece;C;D;rum-air-14;Rum Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="Allied Minor Neutrals" fixed="true" nColumns="3" vert="false">
+<VASSAL.build.widget.PieceSlot entryName="Pol Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;pol-inf-13;Pol Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Pol Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;pol-inf-23;Pol Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Pol Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;51,153,255;51,153,255;100;50;20;30;4.0\\\	piece;C;D;pol-air-14;Pol Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Belg Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;belg-inf-13;Belg Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Belg Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;belg-inf-23;Belg Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Belg Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;102,204,255;102,204,255;100;50;20;30;4.0\\\	piece;C;D;belg-air-14;Belg Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Gre Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;gre-inf-23;Gre Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Gre Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;153,153,0;153,153,0;100;50;20;30;4.0\\\	piece;C;D;gre-air-14;Gre Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Den Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;den-inf-13;Den Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Den Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,102,102;255,102,102;100;50;20;30;4.0\\\	piece;C;D;den-air-14;Den Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Neth Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;neth-inf-23;Neth Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Neth Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,153,51;255,153,51;100;50;20;30;4.0\\\	piece;C;D;neth-air-14;Neth Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Nor Inf 1-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;nor-inf-13;Nor Inf 1-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Swe Inf 2-3" height="48" width="57">+/null/prototype;Ground	prototype;KIA\	prototype;Basic\\	piece;C;D;swe-inf-23;Swe Inf 2-3/	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Swe Naval" height="48" width="57">+/null/prototype;Naval	prototype;Basic\	footprint;84,130;Movement Trail;false;false;6;255,255,153;255,255,153;100;50;20;30;4.0\\	emb2;;2;;Increase;2;X;Decrease;2;Z;;;0;false;0;0;swe-sea-1,swe-sea-2;,;true;;;;false;;1\\\	piece;C;D; ;Swe Naval/	\	false;;0\\	2;\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Swe Air 1-4" height="48" width="57">+/null/prototype;Air	prototype;KIA\	prototype;Basic\\	footprint;84,130;Movement Trail;false;true;6;255,255,153;255,255,153;100;50;20;30;4.0\\\	piece;C;D;swe-air-14;Swe Air 1-4/	\	\\	false;;0\\\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.PanelWidget>
+</VASSAL.build.widget.BoxWidget>
+</VASSAL.build.widget.TabWidget>
+</VASSAL.build.module.PieceWindow>
+<VASSAL.build.module.ChartWindow hotkey="" icon="" name="Charts" text="Charts" tooltip="Charts">
+<VASSAL.build.widget.TabWidget entryName="">
+<VASSAL.build.widget.TabWidget entryName="Land/Air Warfare">
+<VASSAL.build.widget.Chart chartName="Combat Results Table" fileName="chart-CRT.gif"/>
+<VASSAL.build.widget.Chart chartName="Attrition Table" fileName="chart-AT.gif"/>
+<VASSAL.build.widget.Chart chartName="Air Defense Table" fileName="chart-ADT.gif"/>
+<VASSAL.build.widget.Chart chartName="Air Attack Table" fileName="chart-AAT.gif"/>
+<VASSAL.build.widget.Chart chartName="Russian Winter Table" fileName="chart-RWT.gif"/>
+<VASSAL.build.widget.Chart chartName="Resistance" fileName="chart-Resist.gif"/>
+</VASSAL.build.widget.TabWidget>
+<VASSAL.build.widget.TabWidget entryName="Naval">
+<VASSAL.build.widget.Chart chartName="Naval Interception Table" fileName="chart-NIT.gif"/>
+<VASSAL.build.widget.Chart chartName="Fleet Combat Table" fileName="chart-FCT.gif"/>
+<VASSAL.build.widget.Chart chartName="Fleet Staying Power / Reconstruction" fileName="chart-FSPT-NRT.gif"/>
+<VASSAL.build.widget.Chart chartName="SW Ratio/Effects" fileName="chart-SW.gif"/>
+</VASSAL.build.widget.TabWidget>
+<VASSAL.build.widget.TabWidget entryName="BRP Costs">
+<VASSAL.build.widget.Chart chartName="A3R BRP Costs Chart" fileName="chart-BCC-A3R.gif"/>
+</VASSAL.build.widget.TabWidget>
+<VASSAL.build.widget.PanelWidget entryName="Minor Country Forces" fixed="false" nColumns="3" vert="false">
+<VASSAL.build.widget.Chart chartName="Minor Country Forces Chart" fileName="chart-mcFC.gif"/>
+</VASSAL.build.widget.PanelWidget>
+<VASSAL.build.widget.PanelWidget entryName="Terrain Effects" fixed="false" nColumns="3" vert="false">
+<VASSAL.build.widget.Chart chartName="Terrain Effects Chart" fileName="chart-TEC.gif"/>
+</VASSAL.build.widget.PanelWidget>
+</VASSAL.build.widget.TabWidget>
+</VASSAL.build.module.ChartWindow>
+<VASSAL.build.module.NotesWindow buttonText="Notes" hotkey="" icon="/images/notes.gif" tooltip="Notes"/>
+<VASSAL.build.module.PredefinedSetup isMenu="true" name="New Game" useFile="true">
+<VASSAL.build.module.PredefinedSetup isMenu="false" name="Build a game" useFile="false"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_Campaign_Template_Rev1702_AWAW" isMenu="false" name="Campaign Game" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_1939_Scenario_Template_Rev1702_AWAW" isMenu="false" name="1939 Scenario" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_1940_Scenario_Template_Rev1702_AWAW" isMenu="false" name="1940 Scenario" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_1941_Scenario_Template_Rev168" isMenu="false" name="1941 Scenario" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_1942_Scenario_Template_Rev168" isMenu="false" name="1942 Scenario" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_1944_Scenario_Template_Rev168" isMenu="false" name="1944 Scenario" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="A3R_Barbarossa_Scenario_Template_Rev168" isMenu="false" name="Barbarossa Scenario" useFile="true"/>
+</VASSAL.build.module.PredefinedSetup>
+<VASSAL.build.module.PrototypesContainer>
+<VASSAL.build.module.PrototypeDefinition name="Naval">+/null/emb2;Sunk;2;S; ;0; ; ;0; ;;;1;false;0;-18;info-sunk.gif;Sunk;false;Sunk;;	emb2;Damaged;2;G; ;0; ; ;0; ; ;;1;false;0;-18;info-damaged.gif;Damaged;false;Damaged;;\	emb2;Inverted;2;N; ;0; ; ;0; ; ;;1;false;0;-18;info-inverted.gif;Inverted;false;Inverted;;\\	rotate;6;93,130;91,130;Rotate CW;Rotate CCW;;;\\\	markmoved;moved;24;-24;Mark Moved;77,130\\\\	submenu;Unit State;Inverted,Damaged,Sunk\\\\\	piece;;;;/-1;	-1;\	-1;\\	0\\\	false\\\\	\\\\\	null;0;0</VASSAL.build.module.PrototypeDefinition>
+<VASSAL.build.module.PrototypeDefinition name="Basic">+/null/piece;;;;/null;0;0</VASSAL.build.module.PrototypeDefinition>
+<VASSAL.build.module.PrototypeDefinition name="Air">+/null/emb2;Inverted;2;N; ;0; ; ;0; ; ;;1;false;0;-18;info-inverted.gif;;false;Inverted;;	rotate;6;93,130;91,130;Rotate CW;Rotate CCW;;;\	markmoved;moved;24;-24;Mark Moved;77,130\\	submenu;Unit State;Inverted\\\	piece;;;;/-1;	0\	false\\	\\\	null;0;0</VASSAL.build.module.PrototypeDefinition>
+<VASSAL.build.module.PrototypeDefinition name="Ground">+/null/markmoved;moved;24;-24;Mark Moved;77,130	footprint;84,130;Movement Trail;false;true;3;0,0,0;0,0,0;100;50;20;30;2.0\	piece;;;;/false	true;;0\	null;0;0</VASSAL.build.module.PrototypeDefinition>
+<VASSAL.build.module.PrototypeDefinition name="Lent">+/null/emb2;Lent;2;L;;0;;;0;;;;1;false;0;-18;Lent.gif;+Lent;false;Lent;;	piece;;;;/-1;	null;0;0</VASSAL.build.module.PrototypeDefinition>
+<VASSAL.build.module.PrototypeDefinition name="KIA">+/null/emb2;KIA;2;K;;0;;;0;;;;1;false;0;-18;KIA.gif;+killed in action;false;;;	piece;;;;/-1;	null;0;0</VASSAL.build.module.PrototypeDefinition>
+<VASSAL.build.module.PrototypeDefinition name="Does Not Stack">+/null/immob;;N	piece;;;;/	null;252;0</VASSAL.build.module.PrototypeDefinition>
+</VASSAL.build.module.PrototypesContainer>
+<VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+<VASSAL.build.module.gamepieceimage.ColorManager/>
+<VASSAL.build.module.gamepieceimage.FontManager>
+<VASSAL.build.module.gamepieceimage.FontStyle name="Default" style="Dialog,0,12,false"/>
+</VASSAL.build.module.gamepieceimage.FontManager>
+<VASSAL.build.module.gamepieceimage.GamePieceLayoutsContainer/>
+</VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+<VASSAL.build.module.properties.GlobalProperties/>
+<VASSAL.i18n.Language/>
+</VASSAL.launch.BasicModule>

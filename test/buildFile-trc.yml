@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VASSAL.launch.BasicModule VassalVersion="3.2.17" description="Minor Fixes" name="TRC4" nextPieceSlotId="226" version="1.3b06">
+    <TRC.TrcCommandEncoder/>
+    <VASSAL.build.module.Chatter/>
+    <VASSAL.build.module.Documentation>
+        <VASSAL.build.module.documentation.AboutScreen fileName="Vassal-Splash.png" title="About Module"/>
+        <VASSAL.build.module.documentation.AboutScreen fileName="trc3_spalshB.jpg" title="About TRC4 Module"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="Intro.html" fileType="archive" title="Quick Start"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="docs/UsersGuide/index.htm" fileType="file" title="User's Guide"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC-AREA-ratings.htm" fileType="archive" title="TRC-AREA Player Ratings"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC-articles.html" fileType="archive" title="TRC-Articles"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-GameCredits.html" fileType="archive" title="TRC4-Game Credits"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-GameInfo.html" fileType="archive" title="TRC4-GameInfo"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-HotKeys-100926.htm" fileType="archive" title="TRC4-Hotkeys"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-InternetDieRollers.html" fileType="archive" title="TRC4-Internet Die Rollers"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-OptionalRules.html" fileType="archive" title="TRC4-Optional Rules"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-OrganizedPBEM.html" fileType="archive" title="TRC4-Organized PBEM"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-Rules.html" fileType="archive" title="TRC4-Rules"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-Scenarios.htm" fileType="archive" title="TRC4-Scenarios"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-Trustees.html" fileType="archive" title="TRC4-Trustees"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-VariableOOB.html" fileType="archive" title="TRC4-Variable OOB"/>
+        <VASSAL.build.module.documentation.HelpFile fileName="TRC4-VersionHistory-180907.htm" fileType="archive" title="TRC4-Version History"/>
+    </VASSAL.build.module.Documentation>
+    <VASSAL.build.module.GlobalOptions autoReport="Always" centerOnMove="Always" movedTrails="true" nonOwnerUnmaskable="Never" playerIdFormat="$playerName$" promptString="Opponents can unmask my pieces">
+        <option name="stepIcon">StepForward32.gif</option>
+        <option name="undoIcon">undo32.gif</option>
+        <option name="stepHotKey">34,0</option>
+        <option name="serverControlsIcon">connect32.gif</option>
+        <option name="serverControlsHotKey">83,520</option>
+    </VASSAL.build.module.GlobalOptions>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="Map" changeFormat="&lt;$playerId$&gt; $message$" color="255,0,51" createFormat="&lt;$playerId$&gt; $pieceName$ created in $location$" edgeHeight="75" edgeWidth="75" hotkey="" icon="/images/map.gif" launch="false" mapName="TRC Map" markMoved="Use Preferences Setting" markUnmovedIcon="unmoved32.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="&lt;$playerId$&gt; $pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="&lt;$playerId$&gt; $pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="2">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <setup>TRC MapBoardPicker	TRC3	0	0</setup>
+            <VASSAL.build.module.map.boardPicker.Board image="TRC4-MAP-080528-256c.gif" name="TRC4" reversible="false">
+                <VASSAL.build.module.map.boardPicker.board.HexGrid color="0,0,0" cornersLegal="false" dotsVisible="false" dx="78.75863854409555" dy="90.2999999999985" edgesLegal="false" sideways="false" snapTo="true" visible="false" x0="-28" y0="0">
+                    <VASSAL.build.module.map.boardPicker.board.mapgrid.HexGridNumbering color="0,0,0" first="H" fontSize="9" hDescend="false" hDrawOff="0" hLeading="1" hOff="0" hType="N" locationFormat="$gridLocation$" rotateText="0" sep="" stagger="false" vDescend="false" vDrawOff="0" vLeading="1" vOff="1" vType="N" visible="false"/>
+                </VASSAL.build.module.map.boardPicker.board.HexGrid>
+            </VASSAL.build.module.map.boardPicker.Board>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="camera32.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="0,255,204" borderWidth="0" counterReportFormat="" delay="1000" display="from all layers" emptyHexReportForma="$LocationName$" fgColor="255,0,51" fontSize="14" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="0" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="true" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="true" showtextsingle="true" summaryReportFormat="$LocationName$" unrotatePieces="false" version="2" zoomlevel="1.0"/>
+        <VASSAL.build.module.map.Zoomer inButtonText="" inIconName="zoomIn32.gif" inTooltip="Zoom in" outButtonText="" outIconName="zoomOut32.gif" outTooltip="Zoom out" pickButtonText="" pickIconName="/images/zoom.png" pickTooltip="Select Zoom" zoomInKey="" zoomLevels="0.5,0.75,1.0,1.25" zoomOutKey="" zoomPickKey="" zoomStart="3"/>
+        <VASSAL.build.module.map.GlobalMap buttonText="" color="0,0,0" hotkey="79,195" icon="overview32.gif" scale="0.19444444" tooltip="Show/Hide overview window"/>
+        <VASSAL.build.module.map.HidePiecesButton buttonText="" hiddenIcon="globe_selected32.gif" hotkey="" showingIcon="globe_unselected32.gif" tooltip="Hide all pieces on this map"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.MassKeyCommand buttonHotkey="" buttonText="Remove All OOS Markers" deckCount="-1" filter="Supply_Level=2" hotkey="83,520" icon="" name="Remove All OOS Markers" reportFormat="&lt;$playerId$&gt; Remove All OOS Markers" reportSingle="true" singleMap="true" tooltip=""/>
+        <VASSAL.build.module.map.MassKeyCommand buttonHotkey="" buttonText="Remove All Free Rail Markers" deckCount="-1" filter="FreeRail_Level=2" hotkey="70,520" icon="" name="Remove All Free Rail Markers" reportFormat="&lt;$playerId$&gt; Remove All Free Rail Markers" reportSingle="true" singleMap="true" tooltip=""/>
+        <VASSAL.build.module.map.MassKeyCommand buttonHotkey="" buttonText="Remove All Rail Movement Markers" deckCount="-1" filter="Rail_Level=2" hotkey="69,520" icon="" name="Remove All Rail Movement Markers" reportFormat="&lt;$playerId$&gt; Remove All Rail Movement Markers" reportSingle="true" singleMap="true" tooltip=""/>
+        <VASSAL.build.module.map.MassKeyCommand buttonHotkey="" buttonText="Remove All AV Markers" deckCount="-1" filter="AV_Level=2" hotkey="65,520" icon="" name="Remove All AV Markers" reportFormat="&lt;$playerId$&gt; Remove All AV Markers" reportSingle="true" singleMap="true" tooltip=""/>
+        <VASSAL.build.module.map.MassKeyCommand buttonHotkey="" buttonText="Remove All Markers" deckCount="-1" filter="Type=Unit" hotkey="88,520" icon="" name="Remove All Markers" reportFormat="&lt;$playerId$&gt; Remove All Markers" reportSingle="true" singleMap="true" tooltip=""/>
+        <VASSAL.build.module.ToolbarMenu hotkey="" icon="whiskbroom_button.gif" menuItems="Remove All OOS Markers,Remove All Free Rail Markers,Remove All Rail Movement Markers,Remove All AV Markers,Remove All Markers" text="" tooltip="Display Menu Options"/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+        <VASSAL.build.module.map.GlobalMap buttonText="" color="0,0,0" hotkey="79,195" icon="" scale="0.0" tooltip="Show/Hide overview window"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.PrototypesContainer>
+        <VASSAL.build.module.PrototypeDefinition name="Basic">+/null/macro;Remove All Markers;;88,520;;;65\,520,83\,520,70\,520,69\,520	emb2;;2;;AutoVictory;2;A;;0;;;65,520;1;false;0;0;transparent.gif,av_force_layer.gif;,+ (AV attack);true;AV;;;false;;1\	label;76,130;Change Label;14;0,0,0;255,255,255;t;0;c;0;b;c;$pieceName$ ($label$);Dialog;0;0;TextLabel\\	piece;;;;/	1;\	\\	null;0;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Soviet">+/null/emb2;;2;;Free Rail Movement;2;F;;0;;;70,520;1;false;0;0;transparent.gif,train_marker_black_50.gif;,;true;FreeRail;;;false;;1	emb2;;2;;Rail Movement (5);2;E;;0;;;69,520;1;false;0;0;transparent.gif,train_marker_red_50.gif;,;true;Rail;;;false;;1\	prototype;Unit\\	footprint;84,130;Movement Trail;false;true;10;255,51,102;255,204,204;100;50;20;30;3.0\\\	sendto;POW;80,130;POW;;350;50;;;0;0;0;0;;L;;;\\\\	sendto;To Replacement Pool;82,130;ReplacementPool;;350;50;;;0;0;0;0;;L;;;\\\\\	mark;Nation\\\\\\	mark;Side\\\\\\\	piece;;;;/1;	1;\	\\	true;;0\\\	;;\\\\	;;\\\\\	Soviet\\\\\\	Soviet\\\\\\\	null;255;17;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Axis">+/null/footprint;84,130;Movement Trail;false;true;10;0,51,204;102,204,255;100;50;20;30;3.0	emb2;;2;;Free Rail Movement;2;F;;0;;;70,520;1;false;0;0;transparent.gif,train_marker_black_50.gif;,;true;FreeRail;;;false;;1\	emb2;;2;;Rail Movement (6\/3);2;E;;0;;;69,520;1;false;0;0;transparent.gif,train_marker_blue_50.gif;,;true;Rail;;;false;;1\\	prototype;Unit\\\	sendto;POW;80,130;POW;;50;50;;;0;0;0;0;;L;;;\\\\	sendto;To Replacement Pool;82,130;ReplacementPool;;50;50;;;0;0;0;0;;L;;;\\\\\	mark;Side\\\\\\	piece;;;;/true;;0	1;\	1;\\	\\\	;;\\\\	;;\\\\\	Axis\\\\\\	null;250;17;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="German">+/null/prototype;Axis	mark;Nation\	piece;;;;/	German\	null;0;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Italian">+/null/prototype;Axis	mark;Nation\	piece;;;;/	Italian\	null;0;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Finnish">+/null/prototype;Axis	mark;Finnish\	piece;;;;/	German\	null;0;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Hungarian">+/null/prototype;Axis	mark;Hungarian\	piece;;;;/	German\	null;265;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Romanian">+/null/prototype;Axis	mark;Nation\	piece;;;;/	Romanian\	null;0;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Unit">+/null/mark;Type	prototype;Basic\	report;80\,130,82\,130;&lt;$playerId$&gt; $oldLocation$: $newPieceName$ $menuCommand$ *;;;\\	report;83\,130;$oldLocation$: $newPieceName$  *;;;\\\	markmoved;moved.png;12;-28;Mark Moved;77,130\\\\	emb2;;2;;OOS;2;S;;0;;;83,520;1;false;0;0;transparent.gif,supply.gif;,+ (OOS);true;Supply;;;false;;1\\\\\	hide;73,130;Invisible;;player:\\\\\\	piece;;;;/Unit	\	-1\\	-1\\\	false\\\\	1;\\\\\	null\\\\\\	null;0;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Marker">+/null/mark;Type	delete;Delete;68,130\	clone;Clone;67,130\\	piece;;;;/Marker	\	\\	null;0;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Overlay">+/null/mark;Type	immob;cg\	mark;Immobile\\	delete;Delete;68,130\\\	piece;;;;/Overlay	\	true\\	\\\	null;260;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Control">+/null/report;78\,130;$location$: $newPieceName$ *;;	immob;;N\	mark;CONTROL\\	label;76,130;Change Label;10;0,0,0;255,255,255;t;0;c;0;b;c;$pieceName$ ($label$);Dialog;0;0;TextLabel\\\	clone;Clone;67,130\\\\	delete;Delete;68,130\\\\\	piece;;;;/-1	\	true\\	\\\	\\\\	\\\\\	null;261;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Partisan">+/null/sendto;To Partisan Box;66,130;Partisans;;50;50;;;0;0;0;0;	piece;;;;/;;	null;290;0</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Paratroop">+/null/sendto;POW;80,130;POW;;50;50;;;0;0;0;0;	sendto;To Paratroop Box;66,130;Paratroops;;50;50;;;0;0;0;0;\	piece;;;;/;;	;;\	null;290;0</VASSAL.build.module.PrototypeDefinition>
+    </VASSAL.build.module.PrototypesContainer>
+    <VASSAL.build.module.PieceWindow hidden="true" hotkey="" icon="/images/counter.gif" text="Pieces" tooltip="Show/Hide the null window">
+        <VASSAL.build.widget.TabWidget entryName="Pieces">
+            <VASSAL.build.widget.BoxWidget entryName="Axis" height="65" width="173">
+                <VASSAL.build.widget.ListWidget divider="63" entryName="German" height="0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="ge-art-7" gpid="0" height="57" width="57">+/null/prototype;Basic	prototype;German\	piece;;;ge-art-7;ge-art-7/	\	null;0;0;0</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-cav-1" gpid="1" height="57" width="57">+/null/prototype;German	piece;;;ge-cav-1;ge-cav-1/	null;0;0;1</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-luftwaffe" gpid="2" height="57" width="57">+/null/prototype;German	piece;;;ge-luftwaffe;ge-luftwaffe/	null;0;0;2</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Hitler" gpid="3" height="57" width="57">+/null/prototype;German	piece;;;Hitler;Hitler/	null;0;0;3</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-abn-2" gpid="4" height="57" width="57">+/null/prototype;Axis	prototype;Basic\	piece;;;ge-abn-2;ge-abn-2/	\	null;0;0;4</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-abn-XI" gpid="5" height="57" width="57">+/null/prototype;Axis	prototype;Basic\	piece;;;ge-abn-XI;ge-abn-XI/	\	null;0;0;5</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="HQ-North" gpid="6" height="57" width="57">+/null/prototype;German	piece;;;ge-HQ-North;HQ-North/	null;0;0;6</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="HQ-Centre" gpid="7" height="57" width="57">+/null/prototype;German	piece;;;ge-HQ-Center;HQ-Centre/	null;0;0;7</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="HQ-South" gpid="8" height="57" width="57">+/null/prototype;German	piece;;;ge-HQ-South;HQ-South/	null;0;0;8</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-03" gpid="9" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-03;ge-arm-03/	null;0;0;9</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-14" gpid="10" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-14;ge-arm-14/	null;0;0;10</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-24" gpid="11" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-24;ge-arm-24/	null;0;0;11</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-39" gpid="12" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-39;ge-arm-39/	null;0;0;12</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-40" gpid="13" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-40;ge-arm-40/	null;0;0;13</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-41" gpid="14" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-41;ge-arm-41/	null;0;0;14</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-46" gpid="15" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-46;ge-arm-46/	null;0;0;15</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-47" gpid="16" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-47;ge-arm-47/	null;0;0;16</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-48" gpid="17" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-48;ge-arm-48/	null;0;0;17</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-56" gpid="18" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-56;ge-arm-56/	null;0;0;18</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-57" gpid="19" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-57;ge-arm-57/	null;0;0;19</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-GD" gpid="20" height="57" width="57">+/null/prototype;German	piece;;;ge-arm-GD;ge-arm-GD/	null;0;0;20</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-HG" gpid="21" height="57" width="57">+/null/prototype;German	piece;;;ge-HG;ge-arm-HG/	null;0;0;21</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-15" gpid="22" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-15;ge-mtn-15/	null;0;0;22</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-21" gpid="23" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-21;ge-mtn-21/	null;0;0;23</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-22" gpid="24" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-22;ge-mtn-22/	null;0;0;24</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-36" gpid="25" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-36;ge-mtn-36/	null;0;0;25</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-49" gpid="26" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-49;ge-mtn-49/	null;0;0;26</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-91" gpid="27" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-91;ge-mtn-91/	null;0;0;27</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-97" gpid="28" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-97;ge-mtn-97/	null;0;0;28</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-mtn-Deitl" gpid="29" height="57" width="57">+/null/prototype;German	piece;;;ge-mtn-Deitl;ge-mtn-Deitl/	null;0;0;29</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-pzg-11" gpid="30" height="57" width="57">+/null/prototype;German	piece;;;ge-pzg-11;ge-pzg-11/	null;0;0;30</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-pzg-26" gpid="31" height="57" width="57">+/null/prototype;German	piece;;;ge-pzg-26;ge-pzg-26/	null;0;0;31</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-pzg-29" gpid="32" height="57" width="57">+/null/prototype;German	piece;;;ge-pzg-29;ge-pzg-29/	null;0;0;32</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-pzg-43" gpid="33" height="57" width="57">+/null/prototype;German	piece;;;ge-pzg-43;ge-pzg-43/	null;0;0;33</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-pzg-50" gpid="34" height="57" width="57">+/null/prototype;German	piece;;;ge-pzg-50;ge-pzg-50/	null;0;0;34</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-pzg-52" gpid="35" height="57" width="57">+/null/prototype;German	piece;;;ge-pzg-52;ge-pzg-52/	null;0;0;35</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-01" gpid="36" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-01;ge-inf-01/	null;0;0;36</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-02" gpid="37" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-02;ge-inf-02/	null;0;0;37</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-04" gpid="38" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-04;ge-inf-04/	null;0;0;38</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-05" gpid="39" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-05;ge-inf-05/	null;0;0;39</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-06" gpid="40" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-06;ge-inf-06/	null;0;0;40</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-07" gpid="41" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-07;ge-inf-07/	null;0;0;41</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-08" gpid="42" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-08;ge-inf-08/	null;0;0;42</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-09" gpid="43" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-09;ge-inf-09/	null;0;0;43</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-10" gpid="44" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-10;ge-inf-10/	null;0;0;44</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-11" gpid="45" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-11;ge-inf-11/	null;0;0;45</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-12" gpid="46" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-12;ge-inf-12/	null;0;0;46</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-13" gpid="47" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-13;ge-inf-13/	null;0;0;47</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-17" gpid="48" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-17;ge-inf-17/	null;0;0;48</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-20" gpid="49" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-20;ge-inf-20/	null;0;0;49</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-23" gpid="50" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-23;ge-inf-23/	null;0;0;50</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-26" gpid="51" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-26;ge-inf-26/	null;0;0;51</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-27" gpid="52" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-27;ge-inf-27/	null;0;0;52</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-28" gpid="53" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-28;ge-inf-28/	null;0;0;53</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-29" gpid="54" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-29;ge-inf-29/	null;0;0;54</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-30" gpid="55" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-30;ge-inf-30/	null;0;0;55</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-34" gpid="56" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-34;ge-inf-34/	null;0;0;56</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-35" gpid="57" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-35;ge-inf-35/	null;0;0;57</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-38" gpid="58" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-38;ge-inf-38/	null;0;0;58</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-42" gpid="59" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-42;ge-inf-42/	null;0;0;59</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-43" gpid="60" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-43;ge-inf-43/	null;0;0;60</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-44" gpid="61" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-44;ge-inf-44/	null;0;0;61</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-51" gpid="62" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-51;ge-inf-51/	null;0;0;62</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-53" gpid="63" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-53;ge-inf-53/	null;0;0;63</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-55" gpid="64" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-55;ge-inf-55/	null;0;0;64</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-59" gpid="65" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-59;ge-inf-59/	null;0;0;65</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-72" gpid="66" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-72;ge-inf-72/	null;0;0;66</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-90" gpid="67" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-90;ge-inf-90/	null;0;0;67</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-inf-54" gpid="68" height="57" width="57">+/null/prototype;German	piece;;;ge-inf-54;ge-inf-54/	null;0;0;68</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ge-arm-ak" gpid="224" height="57" width="57">+/null/prototype;German	prototype;Basic\	piece;;;ge-arm-ak;ge-arm-ak/	\	null;0;0;224</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.ListWidget divider="0" entryName="SS" height="0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="ss-inf-6" gpid="69" height="57" width="57">+/null/prototype;German	piece;;;ss-inf-6;ss-inf-6/	null;0;0;69</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-pzg-Res" gpid="70" height="57" width="57">+/null/prototype;German	piece;;;ss-mec-Res;ss-pzg-Res/	null;0;0;70</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-mtn-5" gpid="71" height="57" width="57">+/null/prototype;German	piece;;;ss-mtn-5;ss-mtn-5/	null;0;0;71</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-cav-15" gpid="72" height="57" width="57">+/null/prototype;German	piece;;;ss-cav-15;ss-cav-15/	null;0;0;72</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-arm-1" gpid="73" height="57" width="57">+/null/prototype;German	piece;;;ss-arm-1;ss-arm-1/	null;0;0;73</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-arm-2" gpid="74" height="57" width="57">+/null/prototype;German	piece;;;ss-arm-2;ss-arm-2/	null;0;0;74</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-arm-3" gpid="75" height="57" width="57">+/null/prototype;German	piece;;;ss-arm-3;ss-arm-3/	null;0;0;75</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ss-arm-4" gpid="76" height="57" width="57">+/null/prototype;German	piece;;;ss-arm-4;ss-arm-4/	null;0;0;76</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.ListWidget divider="0" entryName="Italian" height="0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="it-inf-3" gpid="77" height="57" width="57">+/null/prototype;Italian	piece;;;it-inf-3;it-inf-3/	null;0;0;77</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="it-inf-4" gpid="78" height="57" width="57">+/null/prototype;Italian	piece;;;it-inf-4;it-inf-4/	null;0;0;78</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="it-inf-5" gpid="79" height="57" width="57">+/null/prototype;Italian	piece;;;it-inf-5;it-inf-5/	null;0;0;79</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.ListWidget divider="0" entryName="Romanian" height="0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="ro-mtn-1" gpid="80" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-mtn-1;ro-mtn-1/	null;0;0;80</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-pzg-2" gpid="81" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-mec-2;ro-pzg-2/	null;0;0;81</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-cav" gpid="82" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-cav;ro-cav/	null;0;0;82</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-arm" gpid="83" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-arm;ro-arm/	null;0;0;83</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-inf-4" gpid="84" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-inf-4;ro-inf-4/	null;0;0;84</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-inf-5" gpid="85" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-inf-5;ro-inf-5/	null;0;0;85</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-inf-6" gpid="86" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-inf-6;ro-inf-6/	null;0;0;86</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-inf-7" gpid="87" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-inf-7;ro-inf-7/	null;0;0;87</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ro-inf-3" gpid="88" height="57" width="57">+/null/prototype;Romanian	piece;;;ro-inf-3;ro-inf-3/	null;0;0;88</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.ListWidget divider="64" entryName="Finnish" height="117" width="173">
+                    <VASSAL.build.widget.PieceSlot entryName="fi-inf-2" gpid="89" height="57" width="57">+/null/prototype;Finnish	piece;;;fi-inf-2;fi-inf-2/	null;0;0;89</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="fi-inf-3" gpid="90" height="57" width="57">+/null/prototype;Finnish	piece;;;fi-inf-3;fi-inf-3/	null;0;0;90</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="fi-inf-6" gpid="91" height="57" width="57">+/null/prototype;Finnish	piece;;;fi-inf-6;fi-inf-6/	null;0;0;91</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="fi-inf-7" gpid="92" height="57" width="57">+/null/prototype;Finnish	piece;;;fi-inf-7;fi-inf-7/	null;0;0;92</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="fi-inf-4" gpid="221" height="57" width="57">+/null/prototype;Finnish	piece;;;fi-inf-4;fi-inf-4/	null;0;0;221</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.ListWidget divider="0" entryName="Hungarian" height="0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="hu-pzg-1" gpid="93" height="57" width="57">+/null/prototype;Hungarian	piece;;;hu-mec-1;hu-pzg-1/	null;0;0;93</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="hu-inf-2" gpid="94" height="57" width="57">+/null/prototype;Hungarian	piece;;;hu-inf-2;hu-inf-2/	null;0;0;94</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="hu-inf-3" gpid="95" height="57" width="57">+/null/prototype;Hungarian	piece;;;hu-inf-3;hu-inf-3/	null;0;0;95</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.PieceSlot entryName="Stuka-hqn" gpid="96" height="59" width="59">+/null/clone;Clone;67,130	sendto;To Airfleld;65,130;Flugplatz;;50;50;;;0;0;0;0;;L;;;;\	emb2;;2;;Increase;2;A;Decrease;2;S;Reset;82,130;0;false;0;0;stuka_c,stuka_n,stuka_s;Stuka-C,Stuka-N,Stuka-S;true;;;;false;;1;1;true;;65,130;83,130\\	piece;;; ;Stuka-hqn/	;;\	1\\	null;0;0;96</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.BoxWidget>
+            <VASSAL.build.widget.BoxWidget entryName="Soviet" height="59" width="167">
+                <VASSAL.build.widget.ListWidget divider="63" entryName="Standard" height="27" width="173">
+                    <VASSAL.build.widget.PieceSlot entryName="Partisans-1" gpid="97" height="57" width="57">+/null/prototype;Partisan	piece;;;Partisan1;Partisans-1/	null;0;0;97</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Partisans-2" gpid="98" height="57" width="57">+/null/prototype;Partisan	piece;;;Partisan2;Partisans-2/	null;0;0;98</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Partisans-3" gpid="99" height="57" width="57">+/null/prototype;Partisan	piece;;;Partisan3;Partisans-3/	null;0;0;99</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Stavka" gpid="100" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-HQ;Stavka/	null;0;0;100</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Stalin" gpid="101" height="57" width="57">+/null/prototype;Soviet	piece;;;Stalin;Stalin/	null;0;0;101</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-1" gpid="102" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-cav-1;ru-cav-1/	null;0;0;102</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-2" gpid="103" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-cav-2;ru-cav-2/	null;0;0;103</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-3" gpid="104" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-cav-3;ru-cav-3/	null;0;0;104</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-4" gpid="105" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-cav-4;ru-cav-4/	null;0;0;105</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-5" gpid="106" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-cav-5;ru-cav-5/	null;0;0;106</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-6" gpid="107" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-cav-6;ru-cav-6/	null;0;0;107</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-01c" gpid="109" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-1;ru-arm-01c/	null;0;0;109</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-02c" gpid="110" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-2;ru-arm-02c/	null;0;0;110</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-03c" gpid="111" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-3;ru-arm-03c/	null;0;0;111</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-04c" gpid="112" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-4;ru-arm-04c/	null;0;0;112</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-05c" gpid="113" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-5;ru-arm-05c/	null;0;0;113</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-06c" gpid="114" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-6;ru-arm-06c/	null;0;0;114</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-07c" gpid="115" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-07;ru-arm-07c/	null;0;0;115</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-08c" gpid="116" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-8;ru-arm-08c/	null;0;0;116</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-09c" gpid="117" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-9;ru-arm-09c/	null;0;0;117</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-10c" gpid="118" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-10;ru-arm-10c/	null;0;0;118</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-11c" gpid="119" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-11;ru-arm-11c/	null;0;0;119</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-12c" gpid="120" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-armc-12;ru-arm-12c/	null;0;0;120</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-1" gpid="121" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-arm-1;ru-arm-1/	null;0;0;121</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-2" gpid="122" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-arm-2;ru-arm-2/	null;0;0;122</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-3" gpid="123" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-arm-3;ru-arm-3/	null;0;0;123</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-4" gpid="124" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-arm-4;ru-arm-4/	null;0;0;124</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-art-1" gpid="125" height="57" width="57">+/null/prototype;Basic	prototype;Soviet\	piece;;;ru-art-1;ru-art-1/	\	null;0;0;125</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-art-2" gpid="126" height="57" width="57">+/null/prototype;Basic	prototype;Soviet\	piece;;;ru-art-2;ru-art-2/	\	null;0;0;126</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-art-3" gpid="127" height="57" width="57">+/null/prototype;Basic	prototype;Soviet\	piece;;;ru-art-3;ru-art-3/	\	null;0;0;127</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-abn-4" gpid="128" height="57" width="57">+/null/prototype;Paratroop	piece;;;ru-abn-4;ru-abn-4/	null;0;0;128</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-abn-5" gpid="129" height="57" width="57">+/null/prototype;Paratroop	piece;;;ru-abn-5;ru-abn-5/	null;0;0;129</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-abn-8" gpid="130" height="57" width="57">+/null/prototype;Paratroop	piece;;;ru-abn-8;ru-abn-8/	null;0;0;130</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-Moscow" gpid="131" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker;Worker-Moscow/	null;0;0;131</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-Lenigrad" gpid="132" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-Leningrad;Worker-Lenigrad/	null;0;0;132</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-Kiev" gpid="133" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-Kiev;Worker-Kiev/	null;0;0;133</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-Kharkov" gpid="134" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-Kharkov;Worker-Kharkov/	null;0;0;134</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-Stalino" gpid="135" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-Slalino;Worker-Stalino/	null;0;0;135</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-03-A" gpid="136" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-03-A;Worker-1-03-A/	null;0;0;136</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-04-B" gpid="137" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-04-B;Worker-1-04-B/	null;0;0;137</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-04-C" gpid="138" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-04-C;Worker-1-04-C/	null;0;0;138</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-05-D" gpid="139" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-05-D;Worker-1-05-D/	null;0;0;139</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-07-E" gpid="140" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-07-E;Worker-1-07-E/	null;0;0;140</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-09-F" gpid="141" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-09-F;Worker-1-09-F/	null;0;0;141</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-2-04-A" gpid="142" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-2-04-A;Worker-2-04-A/	null;0;0;142</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-2-06-B" gpid="143" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-2-06-B;Worker-2-06-B/	null;0;0;143</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="Worker-1-11-G" gpid="144" height="57" width="57">+/null/prototype;Soviet	piece;;;Worker-1-11-G;Worker-1-11-G/	null;0;0;144</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-03" gpid="145" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-03;ru-inf-03/	null;0;0;145</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-04" gpid="146" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-04;ru-inf-04/	null;0;0;146</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-05" gpid="147" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-05;ru-inf-05/	null;0;0;147</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-06" gpid="148" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-06;ru-inf-06/	null;0;0;148</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-07" gpid="149" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-07;ru-inf-07/	null;0;0;149</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-08" gpid="150" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-08;ru-inf-08/	null;0;0;150</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-09" gpid="151" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-09;ru-inf-09/	null;0;0;151</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-10" gpid="152" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-10;ru-inf-10/	null;0;0;152</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-11" gpid="153" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-11;ru-inf-11/	null;0;0;153</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-12" gpid="154" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-12;ru-inf-12/	null;0;0;154</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-13" gpid="155" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-13;ru-inf-13/	null;0;0;155</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-14" gpid="156" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-14;ru-inf-14/	null;0;0;156</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-16" gpid="157" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-16;ru-inf-16/	null;0;0;157</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-18" gpid="158" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-18;ru-inf-18/	null;0;0;158</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-19" gpid="159" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-19;ru-inf-19/	null;0;0;159</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-20" gpid="160" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-20;ru-inf-20/	null;0;0;160</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-21" gpid="161" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-21;ru-inf-21/	null;0;0;161</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-22" gpid="162" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-22;ru-inf-22/	null;0;0;162</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-23" gpid="163" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-23;ru-inf-23/	null;0;0;163</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-24" gpid="164" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-24;ru-inf-24/	null;0;0;164</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-26" gpid="165" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-26;ru-inf-26/	null;0;0;165</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-27" gpid="166" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-27;ru-inf-27/	null;0;0;166</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-29" gpid="167" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-29;ru-inf-29/	null;0;0;167</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-30" gpid="168" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-30;ru-inf-30/	null;0;0;168</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-31" gpid="169" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-31;ru-inf-31/	null;0;0;169</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-32" gpid="170" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-32;ru-inf-32/	null;0;0;170</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-33" gpid="171" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-33;ru-inf-33/	null;0;0;171</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-34" gpid="172" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-34;ru-inf-34/	null;0;0;172</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-37" gpid="173" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-37;ru-inf-37/	null;0;0;173</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-39" gpid="174" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-39;ru-inf-39/	null;0;0;174</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-40" gpid="175" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-40;ru-inf-40/	null;0;0;175</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-43" gpid="176" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-43;ru-inf-43/	null;0;0;176</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-49" gpid="177" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-49;ru-inf-49/	null;0;0;177</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-50" gpid="178" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-50;ru-inf-50/	null;0;0;178</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-52" gpid="179" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-52;ru-inf-52/	null;0;0;179</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-54" gpid="180" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-54;ru-inf-54/	null;0;0;180</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-55" gpid="181" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-55;ru-inf-55/	null;0;0;181</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-59" gpid="182" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-59;ru-inf-59/	null;0;0;182</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-60" gpid="183" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-60;ru-inf-60/	null;0;0;183</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-61" gpid="184" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-inf-61;ru-inf-61/	null;0;0;184</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.ListWidget divider="0" entryName="Guards" height="0" width="0">
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-1Gd" gpid="185" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-1Gd;ru-inf-1Gd/	null;0;0;185</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-2Gd" gpid="186" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-2Gd;ru-inf-2Gd/	null;0;0;186</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-3Gd" gpid="187" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-3Gd;ru-inf-3Gd/	null;0;0;187</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-4Gd" gpid="188" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-4Gd;ru-inf-4Gd/	null;0;0;188</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-5Gd" gpid="189" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-5Gd;ru-inf-5Gd/	null;0;0;189</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-6Gd" gpid="190" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-6Gd;ru-inf-6Gd/	null;0;0;190</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-7Gd" gpid="191" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-7Gd;ru-inf-7Gd/	null;0;0;191</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-8Gd" gpid="192" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-8Gd;ru-inf-8Gd/	null;0;0;192</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-inf-9Gd" gpid="193" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-infa-9Gd;ru-inf-9Gd/	null;0;0;193</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-1Gd" gpid="194" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Gcav-1;ru-cav-1Gd/	null;0;0;194</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-2Gd" gpid="195" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Gcav-2;ru-cav-2Gd/	null;0;0;195</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-3Gd" gpid="196" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Gcav-3;ru-cav-3Gd/	null;0;0;196</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-cav-4Gd" gpid="197" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Gcav-4;ru-cav-4Gd/	null;0;0;197</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-1Gd" gpid="198" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-arm-1Gd;ru-arm-1Gd/	null;0;0;198</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-2Gd" gpid="199" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-2Gd;ru-arm-2Gd/	null;0;0;199</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-3Gd" gpid="200" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-3Gd;ru-arm-3Gd/	null;0;0;200</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-4Gd" gpid="201" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-4Gd;ru-arm-4Gd/	null;0;0;201</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-5Gd" gpid="202" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-5Gd;ru-arm-5Gd/	null;0;0;202</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-6Gd" gpid="203" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-6Gd;ru-arm-6Gd/	null;0;0;203</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-7Gd" gpid="204" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-7Gd;ru-arm-7Gd/	null;0;0;204</VASSAL.build.widget.PieceSlot>
+                    <VASSAL.build.widget.PieceSlot entryName="ru-arm-8Gd" gpid="205" height="57" width="57">+/null/prototype;Soviet	piece;;;ru-Garm-8Gd;ru-arm-8Gd/	null;0;0;205</VASSAL.build.widget.PieceSlot>
+                </VASSAL.build.widget.ListWidget>
+                <VASSAL.build.widget.PieceSlot entryName="Sturmovik" gpid="206" height="59" width="59">+/null/clone;Clone;67,130	sendto;To Airfield;65,130;Flugplatz;;250;50;;;0;0;0;0;;L;;;;\	piece;;;sturm;Sturmovik/	;;\	null;0;0;206</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.BoxWidget>
+            <VASSAL.build.widget.ListWidget divider="0" entryName="Overlays" height="0" width="0">
+                <VASSAL.build.widget.PieceSlot entryName="sep_oct_1942" gpid="207" height="1256" width="3308">+/null/prototype;Overlay	emb2;;2;;;0;;;0;;;;0;false;0;0;sep_oct_1942_scen_overlay_red;;true;;;;false;;1;1;true;;;\	piece;;;;sep_oct_1942/	1\	null;0;0;207</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="mar_apr_1942" gpid="208" height="1000" width="2639">+/null/prototype;Overlay	emb2;;2;;;0;;;0;;;;0;false;0;0;mar_apr_1942_jul_aug_1943_scen_overlay_black;;true;;;;false;;1;1;true;;;\	piece;;;;mar_apr_1942/	1\	null;0;0;208</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="sep_oct_1943" gpid="209" height="1661" width="2443">+/null/prototype;Overlay	emb2;;2;;;0;;;0;;;;0;false;0;0;sep_oct_1943_scen_overlay_blue;;true;;;;false;;1;1;true;;;\	piece;;;;sep_oct_1943/	1\	null;0;0;209</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="mar_apr_1944" gpid="210" height="1311" width="2000">+/null/prototype;Overlay	emb2;;2;;;0;;;0;;;;0;false;0;0;mar_apr_1944_scen_overlay_brown;;true;;;;false;;1;1;true;;;\	piece;;;;mar_apr_1944/	1\	null;0;0;210</VASSAL.build.widget.PieceSlot>
+            </VASSAL.build.widget.ListWidget>
+        </VASSAL.build.widget.TabWidget>
+    </VASSAL.build.module.PieceWindow>
+    <VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+        <VASSAL.build.module.gamepieceimage.ColorManager>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="0,0,0" name="ge-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="138,180,168" name="ge-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,255,255" name="ss-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="0,0,0" name="ss-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,255,255" name="ro-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="60,107,186" name="ro-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="0,153,51" name="hu-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,255,255" name="hu-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="0,0,0" name="it-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="130,180,250" name="it-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,255,255" name="fi-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="0,0,255" name="fi-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="238,190,42" name="ru-bg-red"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="244,244,69" name="ru-bg-brown"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,132,0" name="ru-bg-orange"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="0,0,0" name="ru-fg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,255,0" name="ru-aster"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="51,51,255" name="ru-loc"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="230,230,0" name="ax-loc"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,255,255" name="ge-loc"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="238,190,42" name="ru-bg"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="244,244,69" name="ru-bg-armor"/>
+            <VASSAL.build.module.gamepieceimage.ColorSwatch color="255,132,0" name="ru-bg-guard"/>
+        </VASSAL.build.module.gamepieceimage.ColorManager>
+        <VASSAL.build.module.gamepieceimage.FontManager>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Default" style="Dialog,0,12,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Stats" style="Dialog,0,18,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Id" style="Dialog,1,12,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Loc" style="Dialog,1,14,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Aster" style="Dialog,1,14,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="City" style="Dialog,0,10,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="Partisan" style="Dialog,2,10,false"/>
+            <VASSAL.build.module.gamepieceimage.FontStyle name="IdPlain" style="Dialog,2,12,false"/>
+        </VASSAL.build.module.gamepieceimage.FontManager>
+        <VASSAL.build.module.gamepieceimage.GamePieceLayoutsContainer>
+            <VASSAL.build.module.gamepieceimage.GamePieceLayout border="Fancy" height="57" layout="Symbol;27;21;1.0|Symbol;Center;0;-2;0;true,Text;Stats;center;Command;;67\,130;76\,520;76\,130;false|Stats;Bottom;0;0;0;true,Text;Id;center;Command;;67\,130;76\,520;76\,130;false|Id;Bottom;0;0;270;true,Text;Loc;left;Command;;67\,130;76\,520;76\,130;false|Loc;Top Left;4;0;0;true" name="Ground" width="57">
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-abn-4" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Infantry;Airborne;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;1-2;,Text;Id;Bottom;ru-fg;CLEAR;4;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-abn-5" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Infantry;Airborne;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;1-2;,Text;Id;Bottom;ru-fg;CLEAR;5;,Text;Loc;Top Left;BLACK;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-abn-8" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Infantry;Airborne;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;1-2;,Text;Id;Bottom;ru-fg;CLEAR;8;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-01" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-5;,Text;Id;Bottom;ru-fg;CLEAR;1;,Text;Loc;Top Left;BLACK;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-02" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-5;,Text;Id;Bottom;ru-fg;CLEAR;2;,Text;Loc;Top Left;BLACK;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-03" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-5;,Text;Id;Bottom;ru-fg;CLEAR;3;,Text;Loc;Top Left;BLACK;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-04" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-5;,Text;Id;Bottom;ru-fg;CLEAR;4;,Text;Loc;Top Left;BLACK;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-05" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-5;,Text;Id;Bottom;ru-fg;CLEAR;5;,Text;Loc;Top Left;BLACK;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-06" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-5;,Text;Id;Bottom;ru-fg;CLEAR;6;,Text;Loc;Top Left;BLACK;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-07" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-5;,Text;Id;Bottom;ru-fg;CLEAR;7;,Text;Loc;Top Left;BLACK;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-08" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-5;,Text;Id;Bottom;ru-fg;CLEAR;8;,Text;Loc;Top Left;BLACK;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-09" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-5;,Text;Id;Bottom;ru-fg;CLEAR;9;,Text;Loc;Top Left;BLACK;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-10" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-5;,Text;Id;Bottom;ru-fg;CLEAR;10;,Text;Loc;Top Left;BLACK;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-11" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-5;,Text;Id;Bottom;ru-fg;CLEAR;11;,Text;Loc;Top Left;BLACK;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-armc-12" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-5;,Text;Id;Bottom;ru-fg;CLEAR;12;,Text;Loc;Top Left;BLACK;CLEAR;0;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-arm-1" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-5;,Text;Id;Bottom;ru-fg;CLEAR;1;,Text;Loc;Top Left;BLACK;CLEAR;5;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-arm-2" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-5;,Text;Id;Bottom;ru-fg;CLEAR;2;,Text;Loc;Top Left;BLACK;CLEAR;6;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-arm-3" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-5;,Text;Id;Bottom;ru-fg;CLEAR;3;,Text;Loc;Top Left;BLACK;CLEAR;7;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-armor" borderColor="ru-fg" name="ru-arm-4" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-5;,Text;Id;Bottom;ru-fg;CLEAR;4;,Text;Loc;Top Left;BLACK;CLEAR;7;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-Garm-1Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;10-7;,Text;Id;Bottom;WHITE;CLEAR;1Gd;,Text;Loc;Top Left;WHITE;CLEAR;5;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-2Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;2Gd;,Text;Loc;Top Left;ss-bg;CLEAR;8;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-3Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;3Gd;,Text;Loc;Top Left;ss-bg;CLEAR;9;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-4Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;4Gd;,Text;Loc;Top Left;ss-bg;CLEAR;10;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-5Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;5Gd;,Text;Loc;Top Left;BLACK;CLEAR;12;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-6Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;6Gd;,Text;Loc;Top Left;BLACK;CLEAR;13;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-7Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;7Gd;,Text;Loc;Top Left;BLACK;CLEAR;14;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Garm-8Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Armored;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-6;,Text;Id;Bottom;WHITE;CLEAR;8Gd;,Text;Loc;Top Left;BLACK;CLEAR;15;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-cav-1" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-7;,Text;Id;Bottom;ru-fg;CLEAR;1;,Text;Loc;Top Left;BLACK;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-cav-2" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-7;,Text;Id;Bottom;ru-fg;CLEAR;2;,Text;Loc;Top Left;BLACK;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-cav-3" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;2-7;,Text;Id;Bottom;ru-fg;CLEAR;3;,Text;Loc;Top Left;BLACK;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-cav-4" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-7;,Text;Id;Bottom;ru-fg;CLEAR;4;,Text;Loc;Top Left;BLACK;CLEAR;O;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-cav-5" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-7;,Text;Id;Bottom;ru-fg;CLEAR;5;,Text;Loc;Top Left;BLACK;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-cav-6" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-7;,Text;Id;Bottom;ru-fg;CLEAR;6;,Text;Loc;Top Left;BLACK;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Gcav-1" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-7;,Text;Id;Bottom;WHITE;CLEAR;1Gd;,Text;Loc;Top Left;BLACK;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Gcav-2" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-7;,Text;Id;Bottom;WHITE;CLEAR;2Gd;,Text;Loc;Top Left;BLACK;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Gcav-3" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-7;,Text;Id;Bottom;WHITE;CLEAR;3Gd;,Text;Loc;Top Left;BLACK;CLEAR;10;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-orange" borderColor="ru-fg" name="ru-Gcav-4" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Cavalry/Recon;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-7;,Text;Id;Bottom;WHITE;CLEAR;4Gd;,Text;Loc;Top Left;BLACK;CLEAR;13;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-03" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;3;,Text;Loc;Top Left;BLACK;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-04" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-3;,Text;Id;Bottom;ru-fg;CLEAR;4;,Text;Loc;Top Left;BLACK;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-05" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;5;,Text;Loc;Top Left;WHITE;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-06" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;6;,Text;Loc;Top Left;WHITE;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-07" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;7;,Text;Loc;Top Left;WHITE;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-08" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;8;,Text;Loc;Top Left;WHITE;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-09" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;9;,Text;Loc;Top Left;WHITE;CLEAR;O;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-10" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;10;,Text;Loc;Top Left;WHITE;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-11" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-3;,Text;Id;Bottom;ru-fg;CLEAR;11;,Text;Loc;Top Left;WHITE;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-12" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-3;,Text;Id;Bottom;ru-fg;CLEAR;12;,Text;Loc;Top Left;WHITE;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-13" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;13;,Text;Loc;Top Left;WHITE;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-14" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-3;,Text;Id;Bottom;ru-fg;CLEAR;14;,Text;Loc;Top Left;WHITE;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-16" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-3;,Text;Id;Bottom;ru-fg;CLEAR;16;,Text;Loc;Top Left;WHITE;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-18" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;18;,Text;Loc;Top Left;WHITE;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-19" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;19;,Text;Loc;Top Left;WHITE;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-20" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;20;,Text;Loc;Top Left;WHITE;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-21" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;21;,Text;Loc;Top Left;WHITE;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-22" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;22;,Text;Loc;Top Left;WHITE;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-23" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;23;,Text;Loc;Top Left;WHITE;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-24" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;24;,Text;Loc;Top Left;WHITE;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-26" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;26;,Text;Loc;Top Left;WHITE;CLEAR;K;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-27" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;27;,Text;Loc;Top Left;WHITE;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-29" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;29;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-30" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;30;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-31" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;31;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-32" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;32;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-33" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;33;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-34" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;34;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-37" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;37;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-39" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-3;,Text;Id;Bottom;ru-fg;CLEAR;39;,Text;Loc;Top Left;WHITE;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-40" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;40;,Text;Loc;Top Left;WHITE;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-43" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;43;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-49" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;49;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-50" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;4-3;,Text;Id;Bottom;ru-fg;CLEAR;50;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-52" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-3;,Text;Id;Bottom;ru-fg;CLEAR;52;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-54" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;54;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-55" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;3-3;,Text;Id;Bottom;ru-fg;CLEAR;55;,Text;Loc;Top Left;WHITE;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-59" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-3;,Text;Id;Bottom;ru-fg;CLEAR;59;,Text;Loc;Top Left;WHITE;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-60" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;6-3;,Text;Id;Bottom;ru-fg;CLEAR;60;,Text;Loc;Top Left;WHITE;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-inf-61" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;5-3;,Text;Id;Bottom;ru-fg;CLEAR;61;,Text;Loc;Top Left;WHITE;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-1Gd" props="Symbol;Symbol;Center;BLACK;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;8-4;,Text;Id;Bottom;WHITE;CLEAR;1Gd;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-2Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;2Gd;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-3Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;3Gd;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-4Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;4Gd;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-5Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;5Gd;,Text;Loc;Top Left;BLACK;CLEAR;5;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-6Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;6Gd;,Text;Loc;Top Left;BLACK;CLEAR;6;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-7Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;7Gd;,Text;Loc;Top Left;BLACK;CLEAR;8;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-8Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;8Gd;,Text;Loc;Top Left;BLACK;CLEAR;9;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg-guard" borderColor="ru-fg" name="ru-infa-9Gd" props="Symbol;Symbol;Center;ru-fg;CLEAR;Army;Infantry;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;7-4;,Text;Id;Bottom;WHITE;CLEAR;9Gd;,Text;Loc;Top Left;BLACK;CLEAR;11;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-art-1" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Artillery;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;(2)-3;,Text;Id;Bottom;ru-fg;CLEAR;1;,Text;Loc;Top Left;BLACK;CLEAR;43;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-art-2" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Artillery;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;(2)-3;,Text;Id;Bottom;ru-fg;CLEAR;2;,Text;Loc;Top Left;BLACK;CLEAR;44;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="ru-fg" name="ru-art-3" props="Symbol;Symbol;Center;ru-fg;CLEAR;Corps;Artillery;None;ru-fg,Text;Stats;Bottom;ru-fg;CLEAR;(2)-3;,Text;Id;Bottom;ru-fg;CLEAR;3;,Text;Loc;Top Left;BLACK;CLEAR;45;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-03" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;7-7;,Text;Id;Bottom;ge-fg;CLEAR;3;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-14" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;7-7;,Text;Id;Bottom;ge-fg;CLEAR;14;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-24" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;8-7;,Text;Id;Bottom;ge-fg;CLEAR;24;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-39" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;8-7;,Text;Id;Bottom;ge-fg;CLEAR;39;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-40" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;8-7;,Text;Id;Bottom;ge-fg;CLEAR;40;,Text;Loc;Top Left;ge-loc;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-41" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;8-7;,Text;Id;Bottom;ge-fg;CLEAR;41;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-46" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;6-7;,Text;Id;Bottom;ge-fg;CLEAR;46;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-47" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;7-7;,Text;Id;Bottom;ge-fg;CLEAR;47;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-48" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;6-7;,Text;Id;Bottom;ge-fg;CLEAR;48;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-56" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;7-7;,Text;Id;Bottom;ge-fg;CLEAR;56;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-57" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;6-7;,Text;Id;Bottom;ge-fg;CLEAR;57;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-GD" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;10-8;,Text;Id;Bottom;ge-fg;CLEAR;GD;,Text;Loc;Top Left;ge-loc;CLEAR;16;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-arm-HG" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Armored;Airborne;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;7-8;,Text;Id;Bottom;ge-fg;CLEAR;H. G.;,Text;Loc;Top Left;ge-loc;CLEAR;;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-arm-1" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Armored;None;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;10-8;,Text;Id;Bottom;ss-fg;CLEAR;1ss;,Text;Loc;Top Left;ge-loc;CLEAR;9;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-arm-2" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Armored;None;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;9-8;,Text;Id;Bottom;ss-fg;CLEAR;2ss;,Text;Loc;Top Left;ge-loc;CLEAR;7;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-arm-3" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Armored;None;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;7-7;,Text;Id;Bottom;ss-fg;CLEAR;3ss;,Text;Loc;Top Left;ge-loc;CLEAR;8;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-arm-4" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Armored;None;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;6-7;,Text;Id;Bottom;ss-fg;CLEAR;4ss;,Text;Loc;Top Left;ge-loc;CLEAR;W;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-cav-1" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Cavalry/Recon;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-7;,Text;Id;Bottom;ge-fg;CLEAR;1;,Text;Loc;Top Left;ge-loc;CLEAR;7;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-cav-15" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Cavalry/Recon;None;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;4-7;,Text;Id;Bottom;ss-fg;CLEAR;15ss;,Text;Loc;Top Left;ge-loc;CLEAR;14;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-pzg-11" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Armored;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-6;,Text;Id;Bottom;ge-fg;CLEAR;11;,Text;Loc;Top Left;ge-loc;CLEAR;10;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-pzg-26" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Armored;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-6;,Text;Id;Bottom;ge-fg;CLEAR;26;,Text;Loc;Top Left;ge-loc;CLEAR;10;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-pzg-29" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Armored;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-6;,Text;Id;Bottom;ge-fg;CLEAR;29;,Text;Loc;Top Left;ge-loc;CLEAR;12;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-pzg-43" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Armored;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-6;,Text;Id;Bottom;ge-fg;CLEAR;43;,Text;Loc;Top Left;ge-loc;CLEAR;12;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-pzg-50" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Armored;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-6;,Text;Id;Bottom;ge-fg;CLEAR;50;,Text;Loc;Top Left;ge-loc;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-pzg-52" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Armored;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-6;,Text;Id;Bottom;ge-fg;CLEAR;52;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-pzg-Res" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Infantry;Armored;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;2-7;,Text;Id;Bottom;ss-fg;CLEAR;ss Res;,Text;Loc;Top Left;ge-loc;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-art-7" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Artillery;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;(2)-4;,Text;Id;Bottom;ge-fg;CLEAR;7;,Text;Loc;Top Left;ge-loc;CLEAR;*;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-abn-2" props="Symbol;Symbol;Center;ge-fg;CLEAR;Regiment;Infantry;Airborne;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-5;,Text;Id;Bottom;ge-fg;CLEAR;2;,Text;Loc;Top Left;ge-loc;CLEAR;*;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-luftwaffe" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Airborne;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;2-3;,Text;Id;Bottom;ge-fg;CLEAR;3;,Text;Loc;Top Left;ge-loc;CLEAR;;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-15" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;2-5;,Text;Id;Bottom;ge-fg;CLEAR;15;,Text;Loc;Top Left;ge-loc;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-21" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-5;,Text;Id;Bottom;ge-fg;CLEAR;21;,Text;Loc;Top Left;ge-loc;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-22" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-5;,Text;Id;Bottom;ge-fg;CLEAR;22;,Text;Loc;Top Left;ge-loc;CLEAR;9;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-36" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-5;,Text;Id;Bottom;ge-fg;CLEAR;36;,Text;Loc;Top Left;ge-loc;CLEAR;NF;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-49" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-5;,Text;Id;Bottom;ge-fg;CLEAR;49;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-91" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;2-5;,Text;Id;Bottom;ge-fg;CLEAR;91;,Text;Loc;Top Left;ge-loc;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-97" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;2-5;,Text;Id;Bottom;ge-fg;CLEAR;97;,Text;Loc;Top Left;ge-loc;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-mtn-Deitl" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;Mountain;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-5;,Text;Id;Bottom;ge-fg;CLEAR;Deitl;,Text;Loc;Top Left;ge-loc;CLEAR;NF;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-mtn-5" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Infantry;Mountain;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;5-5;,Text;Id;Bottom;ss-fg;CLEAR;5ss;,Text;Loc;Top Left;ge-loc;CLEAR;B;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-01" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;1;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-02" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;2;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-04" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-4;,Text;Id;Bottom;ge-fg;CLEAR;4;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-05" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;5;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-06" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;6;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-07" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-4;,Text;Id;Bottom;ge-fg;CLEAR;7;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-08" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;8;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-09" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-4;,Text;Id;Bottom;ge-fg;CLEAR;9;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-10" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;10;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-11" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;11;,Text;Loc;Top Left;ge-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-12" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;12;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-13" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;13;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-17" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;17;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-20" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;20;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-23" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;23;,Text;Loc;Top Left;ge-loc;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-26" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;26;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-27" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;27;,Text;Loc;Top Left;ge-loc;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-28" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;28;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-29" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;29;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-30" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;30;,Text;Loc;Top Left;ge-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-34" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;34;,Text;Loc;Top Left;ge-loc;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-35" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;35;,Text;Loc;Top Left;ge-loc;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-38" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;38;,Text;Loc;Top Left;ge-loc;CLEAR;N;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-42" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;42;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-43" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-4;,Text;Id;Bottom;ge-fg;CLEAR;43;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-44" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;5-4;,Text;Id;Bottom;ge-fg;CLEAR;44;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-51" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;51;,Text;Loc;Top Left;ge-loc;CLEAR;3;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-53" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;53;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-54" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;54;,Text;Loc;Top Left;ge-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-55" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;55;,Text;Loc;Top Left;ge-loc;CLEAR;S;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-59" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-4;,Text;Id;Bottom;ge-fg;CLEAR;59;,Text;Loc;Top Left;ge-loc;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-72" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;72;,Text;Loc;Top Left;ge-loc;CLEAR;5;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-inf-90" props="Symbol;Symbol;Center;ge-fg;CLEAR;Corps;Infantry;None;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;3-4;,Text;Id;Bottom;ge-fg;CLEAR;90;,Text;Loc;Top Left;ge-loc;CLEAR;13;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ss-bg" borderColor="ss-fg" name="ss-inf-6" props="Symbol;Symbol;Center;ss-fg;CLEAR;Corps;Infantry;None;ss-fg,Text;Stats;Bottom;ss-fg;CLEAR;4-4;,Text;Id;Bottom;ss-fg;CLEAR;6ss;,Text;Loc;Top Left;ge-loc;CLEAR;11;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="it-bg" borderColor="it-fg" name="it-inf-3" props="Symbol;Symbol;Center;it-fg;CLEAR;Corps;Infantry;None;it-fg,Text;Stats;Bottom;it-fg;CLEAR;2-4;,Text;Id;Bottom;it-fg;CLEAR;I3;,Text;Loc;Top Left;ge-loc;CLEAR;C;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="it-bg" borderColor="it-fg" name="it-inf-4" props="Symbol;Symbol;Center;it-fg;CLEAR;Corps;Infantry;None;it-fg,Text;Stats;Bottom;it-fg;CLEAR;2-3;,Text;Id;Bottom;it-fg;CLEAR;I4;,Text;Loc;Top Left;ge-loc;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="it-bg" borderColor="it-fg" name="it-inf-5" props="Symbol;Symbol;Center;it-fg;CLEAR;Corps;Infantry;None;it-fg,Text;Stats;Bottom;it-fg;CLEAR;2-3;,Text;Id;Bottom;it-fg;CLEAR;I5;,Text;Loc;Top Left;ge-loc;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="fi-bg" borderColor="fi-fg" name="fi-inf-2" props="Symbol;Symbol;Center;fi-fg;CLEAR;Corps;Infantry;None;fi-fg,Text;Stats;Bottom;fi-fg;CLEAR;3-4;,Text;Id;Bottom;fi-fg;CLEAR;F2;,Text;Loc;Top Left;fi-fg;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="fi-bg" borderColor="fi-fg" name="fi-inf-3" props="Symbol;Symbol;Center;fi-fg;CLEAR;Corps;Infantry;None;fi-fg,Text;Stats;Bottom;fi-fg;CLEAR;4-3;,Text;Id;Bottom;fi-fg;CLEAR;F3;,Text;Loc;Top Left;fi-fg;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="fi-bg" borderColor="fi-fg" name="fi-inf-4" props="Symbol;Symbol;Center;fi-fg;CLEAR;Corps;Infantry;None;fi-fg,Text;Stats;Bottom;fi-fg;CLEAR;4-3;,Text;Id;Bottom;fi-fg;CLEAR;F4;,Text;Loc;Top Left;fi-fg;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="fi-bg" borderColor="fi-fg" name="fi-inf-6" props="Symbol;Symbol;Center;fi-fg;CLEAR;Corps;Infantry;None;fi-fg,Text;Stats;Bottom;fi-fg;CLEAR;4-3;,Text;Id;Bottom;fi-fg;CLEAR;F6;,Text;Loc;Top Left;fi-fg;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="fi-bg" borderColor="fi-fg" name="fi-inf-7" props="Symbol;Symbol;Center;fi-fg;CLEAR;Corps;Infantry;None;fi-fg,Text;Stats;Bottom;fi-fg;CLEAR;2-3;,Text;Id;Bottom;fi-fg;CLEAR;F7;,Text;Loc;Top Left;fi-fg;CLEAR;F;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="hu-bg" borderColor="hu-fg" name="hu-pzg-1" props="Symbol;Symbol;Center;WHITE;CLEAR;Corps;Infantry;Armored;WHITE,Text;Stats;Bottom;WHITE;CLEAR;4-6;,Text;Id;Bottom;WHITE;CLEAR;1H;,Text;Loc;Top Left;hu-fg;CLEAR;H;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="hu-bg" borderColor="hu-fg" name="hu-inf-2" props="Symbol;Symbol;Center;hu-fg;CLEAR;Corps;Infantry;None;hu-fg,Text;Stats;Bottom;hu-fg;CLEAR;3-3;,Text;Id;Bottom;hu-fg;CLEAR;H2;,Text;Loc;Top Left;ge-loc;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="hu-bg" borderColor="hu-fg" name="hu-inf-3" props="Symbol;Symbol;Center;hu-fg;CLEAR;Corps;Infantry;None;hu-fg,Text;Stats;Bottom;hu-fg;CLEAR;2-2;,Text;Id;Bottom;hu-fg;CLEAR;H3;,Text;Loc;Top Left;ge-loc;CLEAR;5;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-cav" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Cavalry/Recon;None;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;2-7;,Text;Id;Bottom;ro-fg;CLEAR;Cav;,Text;Loc;Top Left;ge-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-mtn-1" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Infantry;Mountain;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;3-5;,Text;Id;Bottom;ro-fg;CLEAR;1;,Text;Loc;Top Left;ax-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-pzg-2" props="Symbol;Symbol;Center;WHITE;CLEAR;Corps;Infantry;Armored;WHITE,Text;Stats;Bottom;WHITE;CLEAR;4-6;,Text;Id;Bottom;WHITE;CLEAR;R2;,Text;Loc;Top Left;ge-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-arm" props="Symbol;Symbol;Center;WHITE;CLEAR;Corps;Armored;None;WHITE,Text;Stats;Bottom;WHITE;CLEAR;2-6;,Text;Id;Bottom;WHITE;CLEAR;RPz;,Text;Loc;Top Left;ge-loc;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-inf-3" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Infantry;None;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;2-2;,Text;Id;Bottom;ro-fg;CLEAR;R3;,Text;Loc;Top Left;ge-loc;CLEAR;6;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-inf-4" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Infantry;None;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;3-4;,Text;Id;Bottom;ro-fg;CLEAR;R4;,Text;Loc;Top Left;ge-loc;CLEAR;R;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-inf-5" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Infantry;None;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;2-4;,Text;Id;Bottom;ro-fg;CLEAR;R5;,Text;Loc;Top Left;ge-loc;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-inf-6" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Infantry;None;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;2-4;,Text;Id;Bottom;ro-fg;CLEAR;R6;,Text;Loc;Top Left;ge-loc;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ro-bg" borderColor="ro-fg" name="ro-inf-7" props="Symbol;Symbol;Center;ro-fg;CLEAR;Corps;Infantry;None;ro-fg,Text;Stats;Bottom;ro-fg;CLEAR;2-4;,Text;Id;Bottom;ro-fg;CLEAR;R7;,Text;Loc;Top Left;ge-loc;CLEAR;4;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="ge-fg" name="ge-abn-XI" props="Symbol;Symbol;Center;ge-fg;CLEAR;Regiment;Infantry;Airborne;ge-fg,Text;Stats;Bottom;ge-fg;CLEAR;4-5;,Text;Id;Bottom;ge-fg;CLEAR;XI;,Text;Loc;Top Left;ge-loc;CLEAR;*;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="BLACK" name="ge-arm-ak" props="Symbol;Symbol;Center;BLACK;CLEAR;Corps;Armored;None;BLACK,Text;Stats;Bottom;BLACK;CLEAR;8-8;RED,Text;Id;Bottom;BLACK;CLEAR;AK;RED,Text;Loc;Top Left;ge-loc;CLEAR;*1;RED"/>
+            </VASSAL.build.module.gamepieceimage.GamePieceLayout>
+            <VASSAL.build.module.gamepieceimage.GamePieceLayout border="Fancy" height="57" layout="Symbol;27;21;1.0|Symbol0;Center;0;-5;0;true,Text;Loc;center;Fixed;W;;;;false|W;Center;0;-5;0;true,Text;Stats;center;Command;;67\,130;76\,520;76\,130;false|Stats;Bottom;0;-3;0;true,Text;City;center;Command;;67\,130;76\,520;76\,130;false|City;Bottom;0;-2;270;true,Text;Loc;Specified in individual images;;;;;;false|Loc;Top Left;4;0;0;true" name="Workers" width="57">
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-Moscow" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;3;,Text;City;Bottom;BLACK;CLEAR;Moscow;,Text;Loc;Top Left;BLACK;CLEAR;C;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-Kiev" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;2;,Text;City;Bottom;BLACK;CLEAR;Kiev;,Text;Loc;Top Left;BLACK;CLEAR;C;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-Leningrad" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;2;,Text;City;Bottom;BLACK;CLEAR;Leningrad;,Text;Loc;Top Left;BLACK;CLEAR;C;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-Slalino" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;2;,Text;City;Bottom;BLACK;CLEAR;Slalino;,Text;Loc;Top Left;BLACK;CLEAR;C;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-Kharkov" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;2;,Text;City;Bottom;BLACK;CLEAR;Kharkov;,Text;Loc;Top Left;BLACK;CLEAR;C;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-03-A" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;A;,Text;Loc;Top Left;BLACK;CLEAR;3;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-04-B" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;B;,Text;Loc;Top Left;BLACK;CLEAR;4;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-04-C" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;C;,Text;Loc;Top Left;BLACK;CLEAR;4;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-05-D" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;D;,Text;Loc;Top Left;BLACK;CLEAR;5;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-07-E" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;E;,Text;Loc;Top Left;BLACK;CLEAR;7;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-09-F" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;F;,Text;Loc;Top Left;BLACK;CLEAR;9;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-1-11-G" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;1;,Text;City;Bottom;BLACK;CLEAR;G;,Text;Loc;Top Left;BLACK;CLEAR;11;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-2-04-A" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;2;,Text;City;Bottom;BLACK;CLEAR;A;,Text;Loc;Top Left;BLACK;CLEAR;4;RED"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Worker-2-06-B" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;W;Center;BLACK;CLEAR;W;,Text;Stats;Bottom;BLACK;CLEAR;2;,Text;City;Bottom;BLACK;CLEAR;B;,Text;Loc;Top Left;BLACK;CLEAR;6;RED"/>
+            </VASSAL.build.module.gamepieceimage.GamePieceLayout>
+            <VASSAL.build.module.gamepieceimage.GamePieceLayout border="Fancy" height="57" layout="Symbol;27;21;1.0|Symbol0;Center;0;-5;0;true,Text;Loc;center;Fixed;P;;;;false|P;Center;0;-5;0;true,Text;Partisan;center;Fixed;Partisans;67\,130;;76\,130;false|Partisan;Bottom;0;-3;0;true,Text;Loc;left;Command;;67\,130;76\,520;76\,130;false|Loc;Top Left;5;0;0;true" name="Partisans" width="57">
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Partisan1" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;P;Center;BLACK;CLEAR;P;,Text;Partisan;Bottom;BLACK;CLEAR;Partisans;,Text;Loc;Top Left;BLACK;CLEAR;1;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Partisan2" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;P;Center;BLACK;CLEAR;P;,Text;Partisan;Bottom;BLACK;CLEAR;Partisans;,Text;Loc;Top Left;BLACK;CLEAR;2;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Partisan3" props="Symbol;Symbol0;Center;BLACK;CLEAR;None;None;None;BLACK,Text;P;Center;BLACK;CLEAR;P;,Text;Partisan;Bottom;BLACK;CLEAR;Partisans;,Text;Loc;Top Left;BLACK;CLEAR;3;"/>
+            </VASSAL.build.module.gamepieceimage.GamePieceLayout>
+            <VASSAL.build.module.gamepieceimage.GamePieceLayout border="Fancy" height="57" layout="Symbol;27;21;1.0|Symbol0;Center;0;-4;0;true,Text;Stats;center;Fixed;1-7;;;;false|Stats;Bottom;0;-3;0;true,Text;IdPlain;center;Fixed;STAVKA;;;76\,130;false|Id;Bottom;0;0;270;true,Text;Loc;left;Fixed;C;;;;false|Loc;Top Left;-10;0;0;true,Text;Loc;center;Fixed;HQ;;;;false|HQ;Center;0;-4;0;true" name="ru-HQ" width="57">
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="ru-HQ" props="Symbol;Symbol0;Center;BLACK;CLEAR;Army Group;None;None;BLACK,Text;Stats;Bottom;BLACK;CLEAR;1-7;,Text;Id;Bottom;BLACK;CLEAR;STAVKA;,Text;Loc;Top Left;BLUE;CLEAR;C;,Text;HQ;Center;BLACK;CLEAR;HQ;"/>
+            </VASSAL.build.module.gamepieceimage.GamePieceLayout>
+            <VASSAL.build.module.gamepieceimage.GamePieceLayout border="Fancy" height="57" layout="Symbol;27;21;1.0|Symbol0;Center;0;-4;0;true,Text;Stats;center;Fixed;1-7;;;76\,130;false|Stats;Bottom;0;-3;0;true,Text;IdPlain;center;Command;;67\,130;76\,520;76\,130;false|Id;Bottom;0;0;270;true,Text;Loc;center;Fixed;HQ;;;;false|HQ;Center;0;-4;0;true" name="ge-HQ" width="57">
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="BLACK" name="ge-HQ-North" props="Symbol;Symbol0;Center;BLACK;CLEAR;Army Group;None;None;BLACK,Text;Stats;Bottom;BLACK;CLEAR;1-7;,Text;Id;Bottom;BLACK;CLEAR;North;,Text;HQ;Center;BLACK;CLEAR;HQ;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="BLACK" name="ge-HQ-South" props="Symbol;Symbol0;Center;BLACK;CLEAR;Army Group;None;None;BLACK,Text;Stats;Bottom;BLACK;CLEAR;1-7;,Text;Id;Bottom;BLACK;CLEAR;South;,Text;HQ;Center;BLACK;CLEAR;HQ;"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="BLACK" name="ge-HQ-Center" props="Symbol;Symbol0;Center;BLACK;CLEAR;Army Group;None;None;BLACK,Text;Stats;Bottom;BLACK;CLEAR;1-7;,Text;Id;Bottom;BLACK;CLEAR;Center;,Text;HQ;Center;BLACK;CLEAR;HQ;"/>
+            </VASSAL.build.module.gamepieceimage.GamePieceLayout>
+            <VASSAL.build.module.gamepieceimage.GamePieceLayout border="Fancy" height="57" layout="Box;27;21;Rectangle;5|Shape4;Center;0;-4;0;true,Text;Stats;center;Fixed;1-0;;;;false|Stats;Bottom;0;-4;0;true,Text;IdPlain;center;Variable;;;;;false|Id;Bottom;0;0;270;true,Image;;Variable|Image3;Center;0;-3;0;true" name="Leader" width="57">
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ge-bg" borderColor="BLACK" name="Hitler" props="Box;Shape4;Center;CLEAR;BLACK,Text;Stats;Bottom;BLACK;CLEAR;1-0;,Text;Id;Bottom;BLACK;CLEAR;HITLER;,Image;Image3;Center;swastika.png"/>
+                <VASSAL.build.module.gamepieceimage.GamePieceImage bgColor="ru-bg" borderColor="BLACK" name="Stalin" props="Box;Shape4;Center;CLEAR;BLACK,Text;Stats;Bottom;BLACK;CLEAR;St;,Text;Id;Bottom;BLACK;CLEAR;STALIN;,Image;Image3;Center;hammer.png"/>
+            </VASSAL.build.module.gamepieceimage.GamePieceLayout>
+        </VASSAL.build.module.gamepieceimage.GamePieceLayoutsContainer>
+    </VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+    <random.DiceButton hotkey="" icon="1d6.png" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" reportFormat="** $name$ =twister  $result$ *** &lt;$playerName$&gt;" reportTotal="false" text=""/>
+    <VASSAL.build.module.PieceWindow hidden="false" hotkey="" icon="units_button.gif" name="Markers" text="" tooltip="Show/Hide the Markers window">
+        <VASSAL.build.widget.ListWidget divider="61" entryName="Markers" height="59" width="170">
+            <VASSAL.build.widget.PieceSlot entryName="Railhead" gpid="211" height="57" width="57">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;choochoo;Railhead/	\	null;0;0;211</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Invasion" gpid="212" height="57" width="57">+/null/delete;Delete;68,130	clone;Clone;67,130\	piece;;;invasion;Invasion/	\	null;0;0;212</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="AirDrop" gpid="213" height="57" width="57">+/null/delete;Delete;68,130	clone;Clone;67,130\	piece;;;paratroop_marker_57x57;AirDrop/	\	null;0;0;213</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Control 3-0: " gpid="214" height="44" width="43">+/null/emb2;;2;;Nationality;2;N;;0;;;;1;false;0;30;germany-sm3.gif,russia-sm0.gif;+Axis,+Soviet;true;Nation;;;false;;1;1;true;;78,130;	prototype;Control\	piece;;;;Control 3-0: /1	\	null;0;0;214</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Control 2-0: " gpid="215" height="44" width="43">+/null/emb2;;2;;Nationality;2;N;;0;;;;1;false;0;30;germany-sm2.gif,russia-sm0.gif;+Axis,+Soviet;true;Nation;;;false;;1;1;true;;78,130;	prototype;Control\	piece;;;;Control 2-0: /1	\	null;0;0;215</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Control 1-0: " gpid="216" height="44" width="43">+/null/emb2;;2;;Nationality;2;N;;0;;;;1;false;0;30;germany-sm1.gif,russia-sm0.gif;+Axis,+Soviet;true;Nation;;;false;;1;1;true;;78,130;	prototype;Control\	piece;;;;Control 1-0: /1	\	null;0;0;216</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Control 0-1: " gpid="217" height="44" width="43">+/null/emb2;;2;;Nationality;2;N;;0;;;;1;false;0;30;russia-sm1.gif,germany-sm0.gif;+Soviet,+Axis;true;Nation;;;false;;1;1;true;;78,130;	prototype;Control\	piece;;;;Control 0-1: /1	\	null;0;0;217</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Control 0-2: " gpid="218" height="44" width="43">+/null/emb2;;2;;Nationality;2;N;;0;;;;1;false;0;30;russia-sm2.gif,germany-sm0.gif;+Soviet,+Axis;true;Nation;;;false;;1;1;true;;78,130;	prototype;Control\	piece;;;;Control 0-2: /1	\	null;0;0;218</VASSAL.build.widget.PieceSlot>
+            <VASSAL.build.widget.PieceSlot entryName="Battle" gpid="219" height="57" width="60">+/null/label;76,130;Change Label;12;;0,0,0;c;25;c;0;b;c;$pieceName$ ($label$);Dialog;0;0;TextLabel;	emb2;;0;;Increase;2;A;Decrease;2;S;Reset;82,130;1;false;0;0;Battle01.gif,Battle02.gif,Battle03.gif,Battle04.gif,Battle05.gif,Battle06.gif,Battle07.gif,Battle08.gif,Battle09.gif,Battle10.gif,Battle11.gif,Battle12.gif,Battle13.gif,Battle14.gif,Battle15.gif, ;Battle 1,Battle 2,Battle 3,Battle 4,Battle 5,Battle 6,Battle 7,Battle 8,Battle 9,Battle 10,Battle 11,Battle 12,Battle 13,Battle 14,Battle 15,;true;;;;false;;1;1;true;;65,130;83,130\	delete;Delete;68,130\\	clone;Clone;67,130\\\	piece;;;;Battle/7-1	1\	\\	\\\	null;0;0;219</VASSAL.build.widget.PieceSlot>
+        </VASSAL.build.widget.ListWidget>
+    </VASSAL.build.module.PieceWindow>
+    <VASSAL.build.module.NotesWindow buttonText="" hotkey="" icon="notes_button.gif" tooltip="Notes"/>
+    <VASSAL.build.module.ChartWindow hotkey="114,0" icon="charts_button.gif" name="Charts" text="" tooltip="Charts">
+        <VASSAL.build.widget.TabWidget entryName="Charts">
+            <VASSAL.build.widget.HtmlChart chartName="Combat" fileName="combat.html"/>
+            <VASSAL.build.widget.HtmlChart chartName="Movement" fileName="movement.html"/>
+            <VASSAL.build.widget.HtmlChart chartName="Rail Movement" fileName="TRC4-rail-movement.htm"/>
+            <VASSAL.build.widget.HtmlChart chartName="Sea Movement" fileName="TRC4-sea-movement-080502.htm"/>
+            <VASSAL.build.widget.Chart chartName="Weather Chart" fileName="TRC4weatherA.gif"/>
+            <VASSAL.build.widget.Chart chartName="Historical Weather" fileName="TRC3-Historical-Weather.gif"/>
+        </VASSAL.build.widget.TabWidget>
+    </VASSAL.build.module.ChartWindow>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="116,0" icon="gr_oob_button.gif" launch="true" mapName="ge-OOB" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="G-OOB-TRC4-180907.png" name="ge-OOB" reversible="false">
+                <VASSAL.build.module.map.boardPicker.board.SquareGrid color="0,0,0" cornersLegal="false" dotsVisible="false" dx="59.19999999999999" dy="59.09999999999999" edgesLegal="false" range="Metric" snapTo="true" visible="false" x0="31" y0="29"/>
+            </VASSAL.build.module.map.boardPicker.Board>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="2" zoomlevel="1.0"/>
+        <VASSAL.build.module.map.Zoomer inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" pickButtonText="" pickIconName="/images/zoom.png" pickTooltip="Select Zoom" zoomInKey="" zoomLevels="0.6666666666666666,1.0,1.5" zoomOutKey="" zoomPickKey="" zoomStart="3"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="117,0" icon="russian_button.gif" launch="true" mapName="ru-OOB" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="TRC4RuOrbat.gif" name="ru-OOB" reversible="false">
+                <VASSAL.build.module.map.boardPicker.board.SquareGrid color="0,0,0" cornersLegal="false" dotsVisible="false" dx="58.999999999999986" dy="59.09999999999999" edgesLegal="false" range="Metric" snapTo="true" visible="false" x0="32" y0="26"/>
+            </VASSAL.build.module.map.boardPicker.Board>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.map.Zoomer inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" pickButtonText="" pickIconName="/images/zoom.png" pickTooltip="Select Zoom" zoomInKey="" zoomLevels="0.6666666666666666,1.0,1.5" zoomOutKey="" zoomPickKey="" zoomStart="3"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="120,0" icon="optional_button.gif" launch="true" mapName="Optional Units" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="TRC_optionalUnits.gif" name="Optional Units" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="118,0" icon="replacement_button.gif" launch="true" mapName="ReplacementPool" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="trc3_replacement_pool.gif" name="Replacements" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.map.HidePiecesButton buttonText="" hiddenIcon="/images/globe_selected.gif" hotkey="" showingIcon="/images/globe_unselected.gif" tooltip="Hide all pieces on this map"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="119,0" icon="pow_button.gif" launch="true" mapName="POW" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="pow_box.gif" name="Surrendered" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="stuka_button.gif" launch="true" mapName="Flugplatz" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="Flugplatz_boxA.gif" name="Flugplatz" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="paratroop_button.gif" launch="true" mapName="Paratroops" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="paratroop_boxA.gif" name="Board 1" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <VASSAL.build.module.Map allowMultiple="false" backgroundcolor="255,255,255" buttonName="" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="partisan_button.gif" launch="true" mapName="Partisans" markMoved="Never" markUnmovedIcon="/images/unmoved.gif" markUnmovedText="" markUnmovedTooltip="Mark all pieces on this map as not moved" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+        <VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+            <VASSAL.build.module.map.boardPicker.Board image="partisan_box.gif" name="Board 1" reversible="false"/>
+        </VASSAL.build.module.map.BoardPicker>
+        <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+        <VASSAL.build.module.map.ForwardToKeyBuffer/>
+        <VASSAL.build.module.map.Scroller/>
+        <VASSAL.build.module.map.ForwardToChatter/>
+        <VASSAL.build.module.map.MenuDisplayer/>
+        <VASSAL.build.module.map.MapCenterer/>
+        <VASSAL.build.module.map.StackExpander/>
+        <VASSAL.build.module.map.PieceMover/>
+        <VASSAL.build.module.map.KeyBufferer/>
+        <VASSAL.build.module.map.ImageSaver buttonText="" hotkey="" icon="/images/camera.gif" tooltip="Save Map as PNG file"/>
+        <VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showMoveSelectde="false" showNoStack="false" showNonMovable="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" unrotatePieces="false" version="" zoomlevel="1.0"/>
+        <VASSAL.build.module.properties.GlobalProperties/>
+        <VASSAL.build.module.map.SelectionHighlighters/>
+        <VASSAL.build.module.map.HighlightLastMoved color="255,0,0" enabled="true" thickness="2"/>
+    </VASSAL.build.module.Map>
+    <wga.Refresher name="Counter Refresh" text="Refresh" visible="false"/>
+    <VASSAL.build.module.PredefinedSetup isMenu="true" name="Scenarios" useFile="true">
+        <VASSAL.build.module.PredefinedSetup file="New-180907.vsav" isMenu="false" name="New" useFile="true"/>
+        <VASSAL.build.module.PredefinedSetup file="Campaign-180907.vsav" isMenu="false" name="Campaign" useFile="true"/>
+    </VASSAL.build.module.PredefinedSetup>
+    <TRC.TrcInventory destination="Chat Window" groupBy="Nation_Name" hotkey="" icon="control_button.gif" incAllMaps="true" include="CONTROL" mapList="" name="Control Summary" text="" total="Nation_Image"/>
+    <VASSAL.build.module.properties.GlobalProperties/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <VASSAL.i18n.Language/>
+    <TRC.TrcCommandEncoder/>
+    <random.DiceButton hotkey="" icon="1d6.png" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" reportFormat="** $name$ =twister  $result$ *** &lt;$playerName$&gt;" reportTotal="false" text=""/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <VASSAL.build.module.turn.TurnTracker buttonText="Turn" buttonTooltip="1941 Jan/Feb Axis 1st Impulse 1st Impulse" hotkey="" icon="hourglass_button.gif" length="-1" lengthStyle="Maximum" name="Turn" nexthotkey="" prevhotkey="" reportFormat="* &lt;$PlayerId$&gt; Turn Updated from $oldTurn$ to $newTurn$" tooltip="Right-click to configure" turnFormat="$level1$ $level2$ $level3$ $level4$">
+        <VASSAL.build.module.turn.CounterTurnLevel incr="1" loop="false" loopLimit="-1" name="Year" property="year" start="1941" turnFormat="$value$">
+            <VASSAL.build.module.turn.ListTurnLevel configFirst="false" configList="false" list="Jan/Feb,Mar/Apr,May/Jun,Jul/Aug,Sep/Oct,Nov/Dec" name="Month" property="month" turnFormat="$value$">
+                <VASSAL.build.module.turn.ListTurnLevel configFirst="false" configList="false" list="Axis 1st Impulse,Axis 2nd Impulse,Russian 1st Impulse,Russian 2nd Impulse" name="Side" property="sideInPlay" turnFormat="$value$">
+                    <VASSAL.build.module.turn.ListTurnLevel configFirst="false" configList="false" list="1st Impulse" name="Impulse" property="impulse" turnFormat="$value$"/>
+                </VASSAL.build.module.turn.ListTurnLevel>
+            </VASSAL.build.module.turn.ListTurnLevel>
+        </VASSAL.build.module.turn.CounterTurnLevel>
+    </VASSAL.build.module.turn.TurnTracker>
+    <TRC.TrcCommandEncoder/>
+    <random.DiceButton hotkey="" icon="1d6.png" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" reportFormat="** $name$ =twister  $result$ *** &lt;$playerName$&gt;" reportTotal="false" text=""/>
+    <wga.Refresher name="Counter Refresh" text="Refresh" visible="false"/>
+    <TRC.TrcInventory destination="Chat Window" groupBy="Nation_Name" hotkey="" icon="control_button.gif" incAllMaps="true" include="CONTROL" mapList="" name="Control Summary" text="" total="Nation_Image"/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <random.DiceButton hotkey="" icon="1d6.png" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" reportFormat="** $name$ =twister  $result$ *** &lt;$playerName$&gt;" reportTotal="false" text=""/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+    <TRC.TrcCommandEncoder/>
+</VASSAL.launch.BasicModule>

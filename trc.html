@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <style>
+body {
+    margin: 0;
+    font-family: proxima-nova, sans-serif;
+}
+.map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #999;
+}
+.map text {
+    font-size: 10px;
+}
+.map circle {
+    stroke: none;
+    fill: red;
+}
+        </style>
+    </head>
+    <body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- https://github.com/ariutta/svg-pan-zoom#demos -->
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<!-- https://www.redblobgames.com/grids/hexagons/implementation.html -->
+<script src="js/hexlib.js"></script>
+<script>
+
+const
+    width = 1024,
+    height = 768;
+
+var map = d3.select('body')
+    .append('svg')
+    .classed('map', true)
+//    .attr('width', width)
+//    .attr('height', height);
+
+const
+    mapWidth = 3409, mapHeight = 3069,
+    // from buildfile: dx measures column spacing (1.5 * side), dy measures hex height (sqrt(3) * side)
+    dx = 78.75863854409555, dy = 90.2999999999985,
+    ncol = Math.ceil(mapWidth/dx), nrow = Math.ceil(mapHeight/dy);
+
+map.append('image')
+    .attr('href', 'TRC4-MAP-080528-256c.gif')
+    .attr('width', mapWidth)
+    .attr('height', mapHeight);
+
+
+const
+    // flat topped w = 2 * size and height h = sqrt(3) * size
+    mapHexSize = new Point(dx*2/3, dy/Math.sqrt(3)),
+    // offset from map top-left to center of 0,0 hex
+    mapOrigin = new Point(dx*2/3 - dx, 0),
+    mapLayout = new Layout(Layout.flat, mapHexSize, mapOrigin);
+
+
+mapHexes = d3.range(0, ncol).map(i => d3.range(0, nrow).map(j => new OffsetCoord(i+1, j+1)))
+    .flat(1)
+    .map(d => {
+        const cube = OffsetCoord.qoffsetToCube(OffsetCoord.EVEN, d);
+        return {
+            rc: d,
+            cube: cube,
+            pt: mapLayout.hexToPixel(cube)
+        }
+    })
+    .filter(d => d.pt.x >= 0 && d.pt.y >= 0 && d.pt.x < mapWidth && d.pt.y < mapHeight);
+
+mapGrid = map.append('g')
+    .classed('grid', true)
+    .selectAll('.hex')
+    .data(mapHexes)
+  .enter().append('g')
+    .classed('hex', true)
+    .attr('transform', d => 'translate(' + d.pt.x + ',' + d.pt.y + ')');
+
+mapGrid
+    .append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', -0.6 * mapHexSize.y)
+    .text(d => (10000 + 100 * d.rc.col + d.rc.row).toString().slice(-4));
+
+mapGrid
+    .append('circle')
+    .attr('r', 0.1 * mapHexSize.x);
+
+/*
+
+top left hex is 0101, counting down the column as 01rr
+next col is 02rr, offset down half a hex
+
+in the terminology of https://www.redblobgames.com/grids/hexagons/
+
+we have flat-top hexes with even-q offset coord labels starting at 1,1 (EVEN=+1)
+
+from buildfile: dx measures column spacing (1.5 * side), dy measures hex height (sqrt(3) * side),
+x0, y0 measures where top left hex starts somehow
+
+75x75 border around the map
+<VASSAL.build.module.Map ... edgeHeight="75" edgeWidth="75"
+
+<VASSAL.build.module.map.boardPicker.board.HexGrid color="0,0,0" cornersLegal="false" dotsVisible="false" dx="78.75863854409555" dy="90.2999999999985" edgesLegal="false" sideways="false" snapTo="true" visible="false" x0="-28" y0="0">
+
+dx="78.75863854409555" dy="90.2999999999985
+
+height sqrt(3), width 2, dx => 1.5, dy => sqrt(3)
+
+1.1547
+*/
+    var zoom = svgPanZoom('.map', {
+        controlIconsEnabled: true
+/*
+        minZoom: 0.8,
+        maxZoom: 2*Math.max(xmax/width, ymax/height),
+        zoomScaleSensitivity: 0.25
+*/
+    });
+
+
+</script>
+    </body>
+</html>
