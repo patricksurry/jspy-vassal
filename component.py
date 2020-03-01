@@ -2,8 +2,8 @@
 
 from decoder import varargs, disdict, disconcat, seqdict, formatted, boolish, COMMAND_SEPARATOR
 
-def _tabDecoder(proto):
-    return disdict(proto, '\t')
+def _tabProto(**kwargs):
+    return disdict(kwargs, '\t')
 
 _noteTypes=dict(
     NOTES=dict(type='scenario', proto=dict(text=formatted)),
@@ -27,10 +27,10 @@ def noteDecoder(s):
 
 _componentDecoders = dict(
     # module/map/BoardPicker
-    BoardPicker=_tabDecoder(dict(id=str, name=str, x=int, y=int)), #TODO name can be optional name/rev
+    BoardPicker=_tabProto(id=str, name=str, x=int, y=int), #TODO name can be optional name/rev
     # module/turn/TurnTracker.java
     #TODO parse level state
-    TurnTracker=_tabDecoder(dict(id=str, levels=varargs(disdict(dict(turn=int, state=str), '|')))),
+    TurnTracker=_tabProto(id=str, levels=varargs(disdict(dict(turn=int, state=str), '|'))),
     NOTE=noteDecoder
 )
 
